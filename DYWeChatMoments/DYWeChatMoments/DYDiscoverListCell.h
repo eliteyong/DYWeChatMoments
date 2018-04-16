@@ -12,4 +12,7 @@
 
 + (instancetype)dy_discoverListCellForTableView:(UITableView *)tableView;
 
+@property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, assign) BOOL isHiddenLine;
+
 @end

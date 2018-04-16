@@ -10,4 +10,7 @@
 
 @interface DYBaseViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end

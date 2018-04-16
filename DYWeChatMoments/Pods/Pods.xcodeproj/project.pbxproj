@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0185B28E7A5854817200C589BB79F4F4 /* SDAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */; };
+		4D83F308C69CB862B820D1A98452B587 /* UIView+SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF9450BA821924E031458DEC066CE0A /* UITableView+SDAutoTableViewCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C6A7A146257E10553F7D58C48A17D02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7E499FEC848EA295E9DD7EDFC2E45D9D /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		A5FED09F76F5A03665DC8DE48FA74FEA /* SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2B703048801ACB074A2271A41C40550 /* Pods-DYWeChatMoments-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E293A646DF37B55F9A3E7079450C7E5 /* Pods-DYWeChatMoments-dummy.m */; };
+		DF07905FC08651B8EAE0EE20AB494853 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */; };
+		E76853ECD2EB910E5FC6FCE9A18613A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F6E212B6651A76A22E3955F200075AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12CF9B9FEE7D62B205CF2B84736CA51E;
+			remoteInfo = SDAutoLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAutoLayout.h; path = SDAutoLayoutDemo/SDAutoLayout/SDAutoLayout.h; sourceTree = "<group>"; };
+		08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDAutoLayout.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDAutoLayout.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		5E293A646DF37B55F9A3E7079450C7E5 /* Pods-DYWeChatMoments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DYWeChatMoments-dummy.m"; sourceTree = "<group>"; };
+		655156C0E89B68B6FA967FC92E110B20 /* Pods-DYWeChatMoments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYWeChatMoments.debug.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7CEAAD1B5AC8539FAF467AD531A8F106 /* Pods-DYWeChatMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYWeChatMoments.release.xcconfig"; sourceTree = "<group>"; };
+		82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SDAutoTableViewCellHeight.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F7FD2AEBF3D58B551A34C55F1EA041 /* SDAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		AB713BDFDF1D80F01693A8C0A78E8342 /* Pods-DYWeChatMoments-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYWeChatMoments-resources.sh"; sourceTree = "<group>"; };
+		B2FD802B78CF8790B0F8D23B865FB75F /* libSDAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDAutoLayout.a; path = libSDAutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CAF2F807FE5086BBBD41BE961DE198 /* libPods-DYWeChatMoments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-DYWeChatMoments.a"; path = "libPods-DYWeChatMoments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SDAutoTableViewCellHeight.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		C6201EEF07B17991D5E7CF1E50D998D9 /* Pods-DYWeChatMoments-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYWeChatMoments-frameworks.sh"; sourceTree = "<group>"; };
+		D391549D7BA3031396CC7D3314847C3A /* Pods-DYWeChatMoments-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DYWeChatMoments-acknowledgements.plist"; sourceTree = "<group>"; };
+		F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDAutoLayout.xcconfig; sourceTree = "<group>"; };
+		F5E3D54F3EC6F21B7CA2D7F963DC7EB2 /* Pods-DYWeChatMoments-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DYWeChatMoments-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDAutoLayout-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E50D1F091916BE29078FD7E09B05B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C6A7A146257E10553F7D58C48A17D02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD80D972A776B0BEF173CB120F15150E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76853ECD2EB910E5FC6FCE9A18613A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FE72E44B5F1CB12FDE70C26CC46B0F9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */,
+				F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */,
+				94F7FD2AEBF3D58B551A34C55F1EA041 /* SDAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDAutoLayout";
+			sourceTree = "<group>";
+		};
+		641965D67593C806D301D2B7DB3AD690 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */,
+				82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */,
+				C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */,
+				29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */,
+				08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */,
+				3FE72E44B5F1CB12FDE70C26CC46B0F9 /* Support Files */,
+			);
+			name = SDAutoLayout;
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				ABCDF8479A0506B3345CF7B496FE2F2D /* Pods */,
+				ECFEBBEA31E2AE1B43617F40F04F143B /* Products */,
+				E3801C883EB8CFCD63D281F0F6AECACE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ABCDF8479A0506B3345CF7B496FE2F2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				641965D67593C806D301D2B7DB3AD690 /* SDAutoLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE379860BC9875DAE84FD38479F2FE53 /* Pods-DYWeChatMoments */ = {
+			isa = PBXGroup;
+			children = (
+				F5E3D54F3EC6F21B7CA2D7F963DC7EB2 /* Pods-DYWeChatMoments-acknowledgements.markdown */,
+				D391549D7BA3031396CC7D3314847C3A /* Pods-DYWeChatMoments-acknowledgements.plist */,
+				5E293A646DF37B55F9A3E7079450C7E5 /* Pods-DYWeChatMoments-dummy.m */,
+				C6201EEF07B17991D5E7CF1E50D998D9 /* Pods-DYWeChatMoments-frameworks.sh */,
+				AB713BDFDF1D80F01693A8C0A78E8342 /* Pods-DYWeChatMoments-resources.sh */,
+				655156C0E89B68B6FA967FC92E110B20 /* Pods-DYWeChatMoments.debug.xcconfig */,
+				7CEAAD1B5AC8539FAF467AD531A8F106 /* Pods-DYWeChatMoments.release.xcconfig */,
+			);
+			name = "Pods-DYWeChatMoments";
+			path = "Target Support Files/Pods-DYWeChatMoments";
+			sourceTree = "<group>";
+		};
+		E3801C883EB8CFCD63D281F0F6AECACE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE379860BC9875DAE84FD38479F2FE53 /* Pods-DYWeChatMoments */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ECFEBBEA31E2AE1B43617F40F04F143B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5CAF2F807FE5086BBBD41BE961DE198 /* libPods-DYWeChatMoments.a */,
+				B2FD802B78CF8790B0F8D23B865FB75F /* libSDAutoLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E337672361EE14FB05914420E97C1AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FED09F76F5A03665DC8DE48FA74FEA /* SDAutoLayout.h in Headers */,
+				5EF9450BA821924E031458DEC066CE0A /* UITableView+SDAutoTableViewCellHeight.h in Headers */,
+				4D83F308C69CB862B820D1A98452B587 /* UIView+SDAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12CF9B9FEE7D62B205CF2B84736CA51E /* SDAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E180DF38F5EB8192A9ABBEE83A78B4 /* Build configuration list for PBXNativeTarget "SDAutoLayout" */;
+			buildPhases = (
+				F2934A6A15E2E5E7E588E50F1168914C /* Sources */,
+				4E50D1F091916BE29078FD7E09B05B57 /* Frameworks */,
+				3E337672361EE14FB05914420E97C1AA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDAutoLayout;
+			productName = SDAutoLayout;
+			productReference = B2FD802B78CF8790B0F8D23B865FB75F /* libSDAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		49B1EC56B6BE49938D3E944084BEED28 /* Pods-DYWeChatMoments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981F33F82CC2C6C1D1D57B999595F6B2 /* Build configuration list for PBXNativeTarget "Pods-DYWeChatMoments" */;
+			buildPhases = (
+				A684C9C2D3C30F11A828E92AD55F382E /* Sources */,
+				FD80D972A776B0BEF173CB120F15150E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B412891BD14EAF93F649EF91B4C873B4 /* PBXTargetDependency */,
+			);
+			name = "Pods-DYWeChatMoments";
+			productName = "Pods-DYWeChatMoments";
+			productReference = B5CAF2F807FE5086BBBD41BE961DE198 /* libPods-DYWeChatMoments.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = ECFEBBEA31E2AE1B43617F40F04F143B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49B1EC56B6BE49938D3E944084BEED28 /* Pods-DYWeChatMoments */,
+				12CF9B9FEE7D62B205CF2B84736CA51E /* SDAutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A684C9C2D3C30F11A828E92AD55F382E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B703048801ACB074A2271A41C40550 /* Pods-DYWeChatMoments-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2934A6A15E2E5E7E588E50F1168914C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0185B28E7A5854817200C589BB79F4F4 /* SDAutoLayout-dummy.m in Sources */,
+				7E499FEC848EA295E9DD7EDFC2E45D9D /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				DF07905FC08651B8EAE0EE20AB494853 /* UIView+SDAutoLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B412891BD14EAF93F649EF91B4C873B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDAutoLayout;
+			target = 12CF9B9FEE7D62B205CF2B84736CA51E /* SDAutoLayout */;
+			targetProxy = 3F6E212B6651A76A22E3955F200075AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339A9D5D01DDF154F6522F3389024E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655156C0E89B68B6FA967FC92E110B20 /* Pods-DYWeChatMoments.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A38E7A2C7BAED00F8AC91DBE57FEA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E744FA0939C14B63234BD4FBCA248A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBDC60CF26301C3CD930C7ECFADC2304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CEAAD1B5AC8539FAF467AD531A8F106 /* Pods-DYWeChatMoments.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E180DF38F5EB8192A9ABBEE83A78B4 /* Build configuration list for PBXNativeTarget "SDAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A38E7A2C7BAED00F8AC91DBE57FEA35 /* Debug */,
+				E744FA0939C14B63234BD4FBCA248A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981F33F82CC2C6C1D1D57B999595F6B2 /* Build configuration list for PBXNativeTarget "Pods-DYWeChatMoments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339A9D5D01DDF154F6522F3389024E8C /* Debug */,
+				FBDC60CF26301C3CD930C7ECFADC2304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

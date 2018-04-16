@@ -9,9 +9,11 @@
 #ifndef DYWeChatMomentPrefixHeader_pch
 #define DYWeChatMomentPrefixHeader_pch
 
+#define kThemeColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+
 #import "DYCustomHeader.h"
 
-#define kThemeColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+#import <SDAutoLayout.h>
 
 
 #endif /* DYWeChatMomentPrefixHeader_pch */
