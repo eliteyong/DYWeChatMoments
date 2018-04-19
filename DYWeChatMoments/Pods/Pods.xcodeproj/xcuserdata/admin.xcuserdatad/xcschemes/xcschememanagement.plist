@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DYWeChatMoments.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12CF9B9FEE7D62B205CF2B84736CA51E</key>
+		<key>17FAF58105837617E08C51A8431835B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49B1EC56B6BE49938D3E944084BEED28</key>
+		<key>65E8A1526791B5C94F82E16002E104C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>

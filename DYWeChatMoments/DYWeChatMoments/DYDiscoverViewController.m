@@ -9,6 +9,8 @@
 #import "DYDiscoverViewController.h"
 #import "DYDiscoverListCell.h"
 
+#import "DYMomentsFirstViewController.h"
+
 @interface DYDiscoverViewController () <UITableViewDelegate, UITableViewDataSource>
 
 
@@ -29,6 +31,7 @@
                     @[
                         @{@"朋友圈1":@"ff_IconShowAlbum"},
                         @{@"朋友圈2":@"ff_IconShowAlbum"},
+                        @{@"朋友圈3":@"ff_IconShowAlbum"},
                         ],
                     
                     @[
@@ -37,12 +40,13 @@
                         ],
                     
                     @[
-                        @{@"看一看":@"ff_IconShowAlbum"},
-                        @{@"搜一搜":@"ff_IconShowAlbum"},
+                        @{@"看一看":@"ff_IconQRCode"},
+                        @{@"搜一搜":@"ff_IconShake"},
                     ],
                     
                     @[
-                        @{@"漂流瓶":@"ff_IconShowAlbum"},
+                        @{@"附近的人":@"ff_IconLocationService"},
+                        @{@"漂流瓶":@"ff_IconBottle"},
                         ],
                     
                     @[
@@ -56,7 +60,7 @@
                   ];
     [self.view addSubview:self.tableView];
     
-    self.tableView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 49);
+    self.tableView.frame = CGRectMake(0, DYNavbarHeight, DYScreenWidth, DYScreenHeight - DYNavbarHeight - DYTabBarHeight);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -68,7 +72,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 43;
+    return 44;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
@@ -93,7 +97,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    DYMomentsFirstViewController *vc = [[DYMomentsFirstViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

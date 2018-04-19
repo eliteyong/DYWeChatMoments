@@ -48,6 +48,17 @@
     return rect.size.width;
 }
 
+
+- (CGFloat)getLabelAutoHeightWithFont:(UIFont *)font lineSpacing:(CGFloat)lineSpacing width:(CGFloat)width {
+    CGFloat currentHeight = [self getLabelAutoHeightWithFont:font lineSpacing:lineSpacing width:width];
+    //文本的高度减去字体高度小于等于行间距，判断为当前只有1行;如果只有一行那么就是返回一行的高度
+    if (currentHeight - font.lineHeight <= lineSpacing) {
+        currentHeight = currentHeight - lineSpacing;
+    }
+    
+    return currentHeight;
+}
+
 - (CGFloat)getLabelHeightWithFont:(UIFont *)font lineSpacing:(CGFloat)lineSpacing width:(CGFloat)width {
     
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
@@ -62,6 +73,13 @@
     NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle};
     
     CGSize size = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size;
+  
+//    CGFloat currentHeight = size.height;
+//    //文本的高度减去字体高度小于等于行间距，判断为当前只有1行;如果只有一行那么就是返回一行的高度
+//    if (currentHeight - font.lineHeight <= lineSpacing) {
+//        currentHeight = currentHeight - lineSpacing;
+//    }
+    
     
     return size.height;
 }

@@ -10,7 +10,7 @@
 
 #define spaceToLeft             16
 #define iconImageWidth          23
-#define cellHeight              43
+#define cellHeight              44
 #define labelLeftToImage        15
 
 @interface DYDiscoverListCell ()
@@ -55,7 +55,7 @@
 
 - (void)createMainView {
     self.iconImageView = [UIImageView imageViewWithFrame:CGRectZero image:nil];
-    self.nameLabel = [UILabel labelWithTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:16]];
+    self.nameLabel = [UILabel labelWithTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:17]];
     self.lineView = [UIView new];self.lineView.backgroundColor = DYColorSame(238);
     [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.lineView]];
     
@@ -77,8 +77,5 @@
     .yIs(cellHeight - 1)
     .rightSpaceToView(self.contentView, - 110);
 }
-
-
-
 
 @end
