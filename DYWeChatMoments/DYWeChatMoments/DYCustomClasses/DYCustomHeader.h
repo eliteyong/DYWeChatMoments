@@ -34,7 +34,7 @@
 #define DYTabBarHeight (DY_iPhoneX ? (49.f + 34.f) : (49.f))
 #define DYBottomSafeHeight ((DY_iPhoneX) ? (34) : (0))
 
-#define DYAlmostZero 0.0000001
+#define DYAlmostZero 0.0001
 
 
 #define DYColor(r,g,b,al) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:al]

@@ -21,13 +21,10 @@
     self.title = @"朋友圈";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:[[YYFPSLabel alloc]initWithFrame:CGRectMake(0, 5, 60, 30)]];
     [self.view addSubview:self.tableView];
-    UIImageView * backgroundImageView= [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DYScreenWidth, 260)];
-    backgroundImageView.image = [UIImage imageNamed:@"background.jpeg"];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    UIImageView * backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DYScreenWidth, 260)];
+    backgroundImageView.image = [UIImage imageNamed:@"pbg.jpg"];
     self.tableView.tableHeaderView = backgroundImageView;
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).with.offset(-DYNavbarHeight);
-    }];
 }
 
 

@@ -13,7 +13,6 @@
 
 @interface DYDiscoverViewController () <UITableViewDelegate, UITableViewDataSource>
 
-
 @property (nonatomic, strong) NSArray *titles;
 
 @end

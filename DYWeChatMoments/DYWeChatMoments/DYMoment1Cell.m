@@ -8,19 +8,19 @@
 
 #import "DYMoment1Cell.h"
 #import "DYComentsPhotoContainerView.h"
+#import "DYMoments1CommentContainerView.h"
 
-
-const CGFloat contentLabelFontSize = 15;
+const CGFloat contentLabelFontSize = 16;
 CGFloat maxContentLabelHeight = 0; // 根据具体font而定
 
 
 #define iconImageWidth              40
-#define nameFont                    [UIFont systemFontOfSize:16]
+#define nameFont                    [UIFont systemFontOfSize:17]
 #define nameColor                   DYColor(54, 71, 121, 1)
-#define contentFont                 [UIFont systemFontOfSize:15]
+//#define contentFont                 [UIFont systemFontOfSize:15]
 #define contentColor                DYColorSame(51)
 #define moreBtnColor                DYColor(82, 140, 193, 1)
-#define moreBtnFont                 [UIFont systemFontOfSize:14]
+#define moreBtnFont                 [UIFont systemFontOfSize:16]
 #define timeColor                   [UIColor lightGrayColor]
 #define timeFont                    [UIFont systemFontOfSize:13]
 
@@ -33,6 +33,10 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIButton *moreBtn;
 @property (nonatomic, strong) UIButton *operationBtn;
+
+@property (nonatomic, strong) DYMoments1CommentContainerView *commentContainerView;
+
+@property (nonatomic, strong) UIView *bottomLine;
 
 @end
 
@@ -57,11 +61,58 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
 }
 
 - (void)moreBtnClick {
-
+    if (self.moreBlock) {
+        self.moreBlock(self.indexPath);
+    }
 }
 
 - (void)operationBtnClick {
 
+}
+
+- (void)setMoments1CellModel:(DYMonents1CellModel *)moments1CellModel {
+    _moments1CellModel = moments1CellModel;
+    
+    CGFloat margin = 8;
+    
+    self.iconImageView.image = [UIImage imageNamed:moments1CellModel.iconName];
+    self.nameLabel.text = moments1CellModel.name;
+    self.contentLabel.text = moments1CellModel.msgContent;
+    if (moments1CellModel.shouldShowMoreButton) { //如果文字总高度大于max
+        self.moreBtn.sd_layout.heightIs(20).topSpaceToView(self.contentLabel, margin);
+        self.moreBtn.hidden = NO;
+        if (moments1CellModel.isOpening) { // 如果需要展开
+            self.contentLabel.sd_layout.maxHeightIs(MAXFLOAT);
+            [_moreBtn setTitle:@"收起" forState:UIControlStateNormal];
+        } else {
+            _contentLabel.sd_layout.maxHeightIs(maxContentLabelHeight);
+            [_moreBtn setTitle:@"全文" forState:UIControlStateNormal];
+        }
+    } else {
+        self.moreBtn.sd_layout.heightIs(0).topSpaceToView(self.contentLabel, 0);
+        self.moreBtn.hidden = YES;
+    }
+    
+    //图片
+    self.photoContainerView.picPathStringsArray = moments1CellModel.picNamesArray;
+    CGFloat picContainerTopMargin = 0;
+    if (moments1CellModel.picNamesArray.count) {
+        picContainerTopMargin = 10;
+    }
+    _photoContainerView.sd_layout.topSpaceToView(self.moreBtn, picContainerTopMargin);
+
+    //评论框
+    [self.commentContainerView setupWithLikeItemsArray:moments1CellModel.likeItemsArray commentItemsArray:moments1CellModel.commentItemsArray];
+    CGFloat timeLabelTopMargin = 0;
+    if (moments1CellModel.commentItemsArray.count > 0) {
+        timeLabelTopMargin = 10;
+    }
+    self.timeLabel.sd_layout
+    .topSpaceToView(self.commentContainerView, timeLabelTopMargin);
+    
+    [self setupAutoHeightWithBottomView:self.bottomLine bottomMargin:0];
+    
+    _timeLabel.text = @"1分钟前";
 }
 
 - (void)createMainView {
@@ -78,8 +129,18 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     self.timeLabel = [UILabel labelWithTextColor:timeColor font:timeFont];
     
     self.photoContainerView = [[DYComentsPhotoContainerView alloc] init];
+    self.commentContainerView = [[DYMoments1CommentContainerView alloc] init];
     
-    [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.contentLabel,self.photoContainerView,self.moreBtn,self.operationBtn,self.timeLabel]];
+    self.bottomLine = [UIView new];self.bottomLine.backgroundColor = DYColorSame(238);
+    
+    [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.contentLabel,self.photoContainerView,self.moreBtn,self.operationBtn,self.timeLabel,self.commentContainerView,self.bottomLine]];
+    
+    __weak __typeof (self)weakSelf = self;
+    self.commentContainerView.dy_moments1CommentClickBlock = ^(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel) {
+        if (weakSelf.clickedToCommentBlock) {
+            weakSelf.clickedToCommentBlock(weakSelf.indexPath, innerIndexPath, commentModel);
+        }
+    };
     
     UIView *contentView = self.contentView;
     CGFloat margin = 10;
@@ -106,11 +167,36 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     self.moreBtn.sd_layout
     .leftEqualToView(self.contentLabel)
     .topSpaceToView(self.contentLabel, margin)
-    .widthIs(30);
+    .widthIs(35);
     
-    //宽度和
+    //已经在内部实现宽度和高度自适应所以不需要再设置宽度高度，top值是具体有无图片在setModel方法中设置
     self.photoContainerView.sd_layout
     .leftEqualToView(self.contentLabel);
+    
+    //已经在内部实现高度自适应所以不需要再设置高
+    self.commentContainerView.sd_layout
+    .leftEqualToView(self.contentLabel)
+    .rightSpaceToView(contentView, margin)
+    .topSpaceToView(self.photoContainerView, margin);
+    
+    self.timeLabel.sd_layout
+    .leftEqualToView(self.contentLabel)
+    .topSpaceToView(self.commentContainerView, margin)
+    .heightIs(timeFont.lineHeight);
+    [self.timeLabel setSingleLineAutoResizeWithMaxWidth:200];
+    
+    self.operationBtn.sd_layout
+    .rightSpaceToView(contentView, margin)
+    .centerYEqualToView(_timeLabel)
+    .heightIs(25)
+    .widthIs(25);
+    
+    self.bottomLine.sd_layout
+    .leftSpaceToView(contentView, 0)
+    .rightSpaceToView(contentView, 0)
+    .heightIs(1)
+    .topSpaceToView(self.timeLabel, margin *3 / 2);
+    
 }
 
 
