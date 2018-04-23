@@ -9,9 +9,11 @@
 #import "DYMoment1Cell.h"
 #import "DYComentsPhotoContainerView.h"
 #import "DYMoments1CommentContainerView.h"
+#import "DYMomentsCellOperationMenu.h"
 
 const CGFloat contentLabelFontSize = 16;
 CGFloat maxContentLabelHeight = 0; // 根据具体font而定
+NSString *const DYMoment1CellOperationButtonClickedNotification = @"DYMoment1CellOperationButtonClickedNotification";
 
 
 #define iconImageWidth              40
@@ -33,6 +35,7 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIButton *moreBtn;
 @property (nonatomic, strong) UIButton *operationBtn;
+@property (nonatomic, strong) DYMomentsCellOperationMenu *operationMenu;
 
 @property (nonatomic, strong) DYMoments1CommentContainerView *commentContainerView;
 
@@ -66,8 +69,36 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     }
 }
 
+//点击操作按钮
 - (void)operationBtnClick {
+    //1、通知其余cell全部隐藏
+    [self postOperationButtonClickedNotification];
+    //2、自己的按钮显示状态取反
+    _operationMenu.show = !_operationMenu.isShowing;
+}
 
+- (void)receiveOperationButtonClickedNotification:(NSNotification *)notification {
+    UIButton *btn = [notification object];
+    // 点击另一个cell上的按钮时 把其余cell上的全部隐藏；自己的cell并未操作
+    if (btn != self.operationBtn && _operationMenu.isShowing) {
+        _operationMenu.show = NO;
+    }
+}
+
+//点击当前的cell的空白区域
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    //1、通知其余的cell全部隐藏
+    [self postOperationButtonClickedNotification];
+    //2、如果自己正在显示，让自己隐藏
+    if (_operationMenu.isShowing) {
+        _operationMenu.show = NO;
+    }
+}
+
+- (void)postOperationButtonClickedNotification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:DYMoment1CellOperationButtonClickedNotification object:self.operationBtn];
 }
 
 - (void)setMoments1CellModel:(DYMonents1CellModel *)moments1CellModel {
@@ -104,7 +135,7 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     //评论框
     [self.commentContainerView setupWithLikeItemsArray:moments1CellModel.likeItemsArray commentItemsArray:moments1CellModel.commentItemsArray];
     CGFloat timeLabelTopMargin = 0;
-    if (moments1CellModel.commentItemsArray.count > 0) {
+    if (moments1CellModel.commentItemsArray.count > 0 || moments1CellModel.likeItemsArray.count > 0) {
         timeLabelTopMargin = 10;
     }
     self.timeLabel.sd_layout
@@ -116,6 +147,9 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
 }
 
 - (void)createMainView {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOperationButtonClickedNotification:) name:DYMoment1CellOperationButtonClickedNotification object:nil];
+
+    
     self.iconImageView = [UIImageView imageViewWithFrame:CGRectZero image:nil];
     self.nameLabel = [UILabel labelWithTextColor:nameColor font:nameFont];
     self.contentLabel = [UILabel labelWithTextColor:contentColor font:[UIFont systemFontOfSize:contentLabelFontSize]];
@@ -126,6 +160,21 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     //全文
     self.moreBtn = [UIButton buttonWithTitle:@"" titleLabelFont:moreBtnFont titleColor:moreBtnColor backgroundColor:nil target:self action:@selector(moreBtnClick)];
     self.operationBtn = [UIButton buttonWithFrame:CGRectZero image:[UIImage imageNamed:@"AlbumOperateMore"] selectedImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] target:self action:@selector(operationBtnClick)];
+    
+    self.operationMenu = [DYMomentsCellOperationMenu new];
+    __weak __typeof(self)weakSelf = self;
+    [self.operationMenu setLikeBtnClickBlock:^{
+        if ([weakSelf.delegate respondsToSelector:@selector(didClickLikeBtnInCell:)]) {
+            [weakSelf.delegate didClickLikeBtnInCell:weakSelf];
+        }
+    }];
+    [self.operationMenu setCommentBtnClickBlock:^{
+        if ([weakSelf.delegate respondsToSelector:@selector(didClickCommentBtnInCell:)]) {
+            [weakSelf.delegate didClickCommentBtnInCell:weakSelf];
+        }
+    }];
+    
+    
     self.timeLabel = [UILabel labelWithTextColor:timeColor font:timeFont];
     
     self.photoContainerView = [[DYComentsPhotoContainerView alloc] init];
@@ -133,9 +182,8 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     
     self.bottomLine = [UIView new];self.bottomLine.backgroundColor = DYColorSame(238);
     
-    [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.contentLabel,self.photoContainerView,self.moreBtn,self.operationBtn,self.timeLabel,self.commentContainerView,self.bottomLine]];
+    [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.contentLabel,self.photoContainerView,self.moreBtn,self.operationBtn,self.operationMenu,self.timeLabel,self.commentContainerView,self.bottomLine]];
     
-    __weak __typeof (self)weakSelf = self;
     self.commentContainerView.dy_moments1CommentClickBlock = ^(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel) {
         if (weakSelf.clickedToCommentBlock) {
             weakSelf.clickedToCommentBlock(weakSelf.indexPath, innerIndexPath, commentModel);
@@ -197,6 +245,11 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     .heightIs(1)
     .topSpaceToView(self.timeLabel, margin *3 / 2);
     
+    self.operationMenu.sd_layout
+    .rightSpaceToView(self.operationBtn, 0)
+    .heightIs(36)
+    .centerYEqualToView(self.operationBtn)
+    .widthIs(0);
 }
 
 

@@ -60,7 +60,7 @@
     [self setupAutoHeightWithBottomView:self.commentLabel bottomMargin:6];
 }
 
-#pragma mark - private actions
+#pragma mark --- private actions
 
 - (NSMutableAttributedString *)generateAttributedStringWithCommentItemModel:(DYMonents1CellCommentItemModel *)model {
     NSString *text = model.firstUserName;

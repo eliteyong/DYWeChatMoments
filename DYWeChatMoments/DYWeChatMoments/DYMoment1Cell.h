@@ -11,7 +11,16 @@
 
 typedef void(^DYMoment1Block)(NSIndexPath *currentIndexPath);
 
+@protocol DYMomentsCellOperationDelegate <NSObject>
+
+- (void)didClickLikeBtnInCell:(UITableViewCell *)cell;
+- (void)didClickCommentBtnInCell:(UITableViewCell *)cell;
+
+@end
+
 @interface DYMoment1Cell : UITableViewCell
+
+@property (nonatomic, weak) id<DYMomentsCellOperationDelegate> delegate;
 
 // outerIndexPath最外层的朋友圈所在的cell;innerIndexPath内层的点击评论所在的indexPath;commentModel当前点击的内层数据模型
 @property (nonatomic, copy) void (^clickedToCommentBlock)(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel);

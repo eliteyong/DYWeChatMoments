@@ -23,6 +23,7 @@
 		841A58FD2089CF29009C1B07 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 841A58F12089CF29009C1B07 /* LICENSE */; };
 		841A58FE2089CF29009C1B07 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 841A58F22089CF29009C1B07 /* README.md */; };
 		843314B82086F95C005BA780 /* DYMomentsFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */; };
+		843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */; };
 		84498B05207B109C00249F78 /* DYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B04207B109C00249F78 /* DYHomeViewController.m */; };
 		84498B09207B15E400249F78 /* DYContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B08207B15E400249F78 /* DYContactsViewController.m */; };
 		84498B0D207B162900249F78 /* DYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B0C207B162900249F78 /* DYDiscoverViewController.m */; };
@@ -169,6 +170,8 @@
 		841A58F22089CF29009C1B07 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		843314B62086F95C005BA780 /* DYMomentsFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMomentsFirstViewController.h; sourceTree = "<group>"; };
 		843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMomentsFirstViewController.m; sourceTree = "<group>"; };
+		843989D3208D65A300AEC598 /* DYMomentsCellOperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMomentsCellOperationMenu.h; sourceTree = "<group>"; };
+		843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMomentsCellOperationMenu.m; sourceTree = "<group>"; };
 		84498B02207B0F5A00249F78 /* DYWeChatMomentPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYWeChatMomentPrefixHeader.pch; sourceTree = "<group>"; };
 		84498B03207B109C00249F78 /* DYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYHomeViewController.h; sourceTree = "<group>"; };
 		84498B04207B109C00249F78 /* DYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYHomeViewController.m; sourceTree = "<group>"; };
@@ -430,6 +433,15 @@
 				841A58D52089CA7F009C1B07 /* DYMonets1CommentCell.m */,
 			);
 			name = "朋友圈第一种实现方式";
+			sourceTree = "<group>";
+		};
+		843989D6208D65A800AEC598 /* OperationMenu点击操作按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				843989D3208D65A300AEC598 /* DYMomentsCellOperationMenu.h */,
+				843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */,
+			);
+			name = "OperationMenu点击操作按钮";
 			sourceTree = "<group>";
 		};
 		84498B06207B10AB00249F78 /* Home微信 */ = {
@@ -764,6 +776,7 @@
 			children = (
 				847225812084977D00E0F76D /* DYMomentsBaseViewController.h */,
 				847225822084977D00E0F76D /* DYMomentsBaseViewController.m */,
+				843989D6208D65A800AEC598 /* OperationMenu点击操作按钮 */,
 				84564DEE208866730060932D /* 九宫格图片的Container */,
 			);
 			name = "朋友圈基类";
@@ -1086,6 +1099,7 @@
 				841A58FE2089CF29009C1B07 /* README.md in Sources */,
 				84564DDF2088618A0060932D /* SDWebImageDecoder.m in Sources */,
 				84563DBB207A1B0900A4A77D /* DYBaseTableViewController.m in Sources */,
+				843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */,
 				84498B0D207B162900249F78 /* DYDiscoverViewController.m in Sources */,
 				84564DD92088618A0060932D /* SDPhotoBrowser.m in Sources */,
 				841A58FB2089CF29009C1B07 /* MLLabel.m in Sources */,

@@ -11,7 +11,7 @@
 #import "DYMonents1CellModel.h"
 
 
-@interface DYMomentsFirstViewController () 
+@interface DYMomentsFirstViewController () <DYMomentsCellOperationDelegate>
 
 @end
 
@@ -75,6 +75,7 @@
     DYMoment1Cell *cell = [DYMoment1Cell dy_moment1CellForTableView:tableView];
     cell.moments1CellModel = self.dataArray[indexPath.row];
     cell.indexPath = indexPath;
+    cell.delegate = self;
     //点击更多的block
     cell.moreBlock = ^(NSIndexPath *currentIndexPath) {
         DYMonents1CellModel *model = [weakSelf.dataArray objectAtIndex:currentIndexPath.row];
@@ -109,6 +110,39 @@
     return width;
 }
 
+#pragma mark --- DYMomentsCellOperationDelegate
+//点击喜欢
+- (void)didClickLikeBtnInCell:(UITableViewCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    DYMonents1CellModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    NSMutableArray *tempArr = [NSMutableArray arrayWithArray:model.likeItemsArray];
+    if (!model.isLiked) {
+        DYMonents1CellLikeItemModel *likeModel = [DYMonents1CellLikeItemModel new];
+        likeModel.userName = @"elite_kyo";
+        likeModel.userId = @"elite_kyo_iOS";
+        [tempArr addObject:likeModel];
+        model.liked = YES;
+    } else {
+        DYMonents1CellLikeItemModel *tempLikeModel = nil;
+        for (DYMonents1CellLikeItemModel *likeModel in model.likeItemsArray) {
+            if ([likeModel.userName isEqualToString:@"elite_kyo"]) {
+                tempLikeModel = likeModel;
+            }
+        }
+        [tempArr removeObject:tempLikeModel];
+        model.liked = NO;
+    }
+    model.likeItemsArray = [tempArr copy];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+
+    });
+}
+//点击评论
+- (void)didClickCommentBtnInCell:(UITableViewCell *)cell {
+
+}
 
 
 - (NSArray *)creatModelsWithCount:(NSInteger)count {
