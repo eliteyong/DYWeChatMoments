@@ -23,7 +23,7 @@ typedef void(^DYMoment1Block)(NSIndexPath *currentIndexPath);
 @property (nonatomic, weak) id<DYMomentsCellOperationDelegate> delegate;
 
 // outerIndexPath最外层的朋友圈所在的cell;innerIndexPath内层的点击评论所在的indexPath;commentModel当前点击的内层数据模型
-@property (nonatomic, copy) void (^clickedToCommentBlock)(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel);
+@property (nonatomic, copy) void (^clickedToCommentBlock)(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel,CGRect rectInWindow);
 
 + (instancetype)dy_moment1CellForTableView:(UITableView *)tableView;
 

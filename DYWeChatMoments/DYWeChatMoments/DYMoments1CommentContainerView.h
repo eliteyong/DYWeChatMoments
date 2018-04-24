@@ -11,7 +11,7 @@
 
 @interface DYMoments1CommentContainerView : UIView
 
-@property (nonatomic, copy) void (^dy_moments1CommentClickBlock)(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel);
+@property (nonatomic, copy) void (^dy_moments1CommentClickBlock)(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel, CGRect rectInWindow);
 
 - (void)setupWithLikeItemsArray:(NSArray *)likeItemsArray commentItemsArray:(NSArray *)commentItemsArray;
 

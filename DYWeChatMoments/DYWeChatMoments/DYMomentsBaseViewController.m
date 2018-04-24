@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"朋友圈";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:[[YYFPSLabel alloc]initWithFrame:CGRectMake(0, 5, 60, 30)]];
     [self.view addSubview:self.tableView];
     self.automaticallyAdjustsScrollViewInsets = NO;
     UIImageView * backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DYScreenWidth, 260)];

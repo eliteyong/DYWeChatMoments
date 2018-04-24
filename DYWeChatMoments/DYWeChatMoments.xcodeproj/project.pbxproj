@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42A0E632AEA83C1F6724FE95 /* libPods-DYWeChatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91644B16954D7BB36EED39D0 /* libPods-DYWeChatMoments.a */; };
+		8410DF85208EB317007F7F6D /* DYPlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */; };
 		841A58D32089BEDA009C1B07 /* DYMoments1CommentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58D22089BEDA009C1B07 /* DYMoments1CommentContainerView.m */; };
 		841A58D62089CA7F009C1B07 /* DYMonets1CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58D52089CA7F009C1B07 /* DYMonets1CommentCell.m */; };
 		841A58F32089CF29009C1B07 /* NSAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58DB2089CF29009C1B07 /* NSAttributedString+MLLabel.m */; };
@@ -24,6 +25,7 @@
 		841A58FE2089CF29009C1B07 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 841A58F22089CF29009C1B07 /* README.md */; };
 		843314B82086F95C005BA780 /* DYMomentsFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */; };
 		843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */; };
+		843989D9208DD3D200AEC598 /* DYCommentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843989D8208DD3D200AEC598 /* DYCommentTextView.m */; };
 		84498B05207B109C00249F78 /* DYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B04207B109C00249F78 /* DYHomeViewController.m */; };
 		84498B09207B15E400249F78 /* DYContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B08207B15E400249F78 /* DYContactsViewController.m */; };
 		84498B0D207B162900249F78 /* DYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84498B0C207B162900249F78 /* DYDiscoverViewController.m */; };
@@ -141,6 +143,8 @@
 
 /* Begin PBXFileReference section */
 		393EA6E2F31AB29363586383 /* Pods-DYWeChatMoments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWeChatMoments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYWeChatMoments/Pods-DYWeChatMoments.debug.xcconfig"; sourceTree = "<group>"; };
+		8410DF83208EB317007F7F6D /* DYPlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPlacehoderTextView.h; sourceTree = "<group>"; };
+		8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPlacehoderTextView.m; sourceTree = "<group>"; };
 		841A58D12089BEDA009C1B07 /* DYMoments1CommentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMoments1CommentContainerView.h; sourceTree = "<group>"; };
 		841A58D22089BEDA009C1B07 /* DYMoments1CommentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMoments1CommentContainerView.m; sourceTree = "<group>"; };
 		841A58D42089CA7F009C1B07 /* DYMonets1CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMonets1CommentCell.h; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 		843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMomentsFirstViewController.m; sourceTree = "<group>"; };
 		843989D3208D65A300AEC598 /* DYMomentsCellOperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMomentsCellOperationMenu.h; sourceTree = "<group>"; };
 		843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMomentsCellOperationMenu.m; sourceTree = "<group>"; };
+		843989D7208DD3D200AEC598 /* DYCommentTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCommentTextView.h; sourceTree = "<group>"; };
+		843989D8208DD3D200AEC598 /* DYCommentTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCommentTextView.m; sourceTree = "<group>"; };
 		84498B02207B0F5A00249F78 /* DYWeChatMomentPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYWeChatMomentPrefixHeader.pch; sourceTree = "<group>"; };
 		84498B03207B109C00249F78 /* DYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYHomeViewController.h; sourceTree = "<group>"; };
 		84498B04207B109C00249F78 /* DYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYHomeViewController.m; sourceTree = "<group>"; };
@@ -431,6 +437,8 @@
 				841A58D22089BEDA009C1B07 /* DYMoments1CommentContainerView.m */,
 				841A58D42089CA7F009C1B07 /* DYMonets1CommentCell.h */,
 				841A58D52089CA7F009C1B07 /* DYMonets1CommentCell.m */,
+				843989D7208DD3D200AEC598 /* DYCommentTextView.h */,
+				843989D8208DD3D200AEC598 /* DYCommentTextView.m */,
 			);
 			name = "朋友圈第一种实现方式";
 			sourceTree = "<group>";
@@ -745,6 +753,8 @@
 				847225722084847700E0F76D /* DYCustomHeader.h */,
 				847225732084847700E0F76D /* NS家族 */,
 				847225762084847700E0F76D /* UI家族 */,
+				8410DF83208EB317007F7F6D /* DYPlacehoderTextView.h */,
+				8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */,
 			);
 			path = DYCustomClasses;
 			sourceTree = "<group>";
@@ -1060,6 +1070,7 @@
 				84498B09207B15E400249F78 /* DYContactsViewController.m in Sources */,
 				847225832084977D00E0F76D /* DYMomentsBaseViewController.m in Sources */,
 				84564DAA208848D80060932D /* DYMonents1CellModel.m in Sources */,
+				843989D9208DD3D200AEC598 /* DYCommentTextView.m in Sources */,
 				84564DE02088618A0060932D /* SDWebImageDownloader.m in Sources */,
 				8472257D2084847700E0F76D /* NSString+DYCustom.m in Sources */,
 				841A58D32089BEDA009C1B07 /* DYMoments1CommentContainerView.m in Sources */,
@@ -1097,6 +1108,7 @@
 				841A58F92089CF29009C1B07 /* NSString+MLExpression.m in Sources */,
 				843314B82086F95C005BA780 /* DYMomentsFirstViewController.m in Sources */,
 				841A58FE2089CF29009C1B07 /* README.md in Sources */,
+				8410DF85208EB317007F7F6D /* DYPlacehoderTextView.m in Sources */,
 				84564DDF2088618A0060932D /* SDWebImageDecoder.m in Sources */,
 				84563DBB207A1B0900A4A77D /* DYBaseTableViewController.m in Sources */,
 				843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */,

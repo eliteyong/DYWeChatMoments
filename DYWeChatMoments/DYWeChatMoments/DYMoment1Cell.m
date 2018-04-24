@@ -184,9 +184,9 @@ NSString *const DYMoment1CellOperationButtonClickedNotification = @"DYMoment1Cel
     
     [self.contentView sd_addSubviews:@[self.iconImageView,self.nameLabel,self.contentLabel,self.photoContainerView,self.moreBtn,self.operationBtn,self.operationMenu,self.timeLabel,self.commentContainerView,self.bottomLine]];
     
-    self.commentContainerView.dy_moments1CommentClickBlock = ^(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel) {
+    self.commentContainerView.dy_moments1CommentClickBlock = ^(NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *commentModel, CGRect rectInWindow) {
         if (weakSelf.clickedToCommentBlock) {
-            weakSelf.clickedToCommentBlock(weakSelf.indexPath, innerIndexPath, commentModel);
+            weakSelf.clickedToCommentBlock(weakSelf.indexPath, innerIndexPath, commentModel,rectInWindow);
         }
     };
     

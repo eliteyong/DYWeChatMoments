@@ -41,11 +41,14 @@
 #define DYColorSame(r) [UIColor colorWithRed:r/255.0 green:r/255.0 blue:r/255.0 alpha:1]
 #define DYColorRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue&0xFF0000)>>16))/255.0 green:((float)((rgbValue&0xFF00)>>8))/255.0 blue:((float)(rgbValue&0xFF))/255.0 alpha:1.0]
 
-
+//UI家族类别
 #import "UILabel+DYCustom.h"
 #import "UIButton+DYCustom.h"
 #import "UIImageView+DYCustom.h"
-
+//NS家族类别
 #import "NSString+DYCustom.h"
+
+//UI家族继承
+#import "DYPlacehoderTextView.h"
 
 #endif /* DYCustomHeader_h */

@@ -33,8 +33,8 @@
 }
 
 - (void)createMainView {
-    self.backgroundColor = DYColorSame(111);
-    
+    self.backgroundColor = DYColorSame(240);
+
     self.tempView = [UIView new]; self.tempView.backgroundColor = DYColorSame(220);
     [self addSubview:self.tempView];
     
@@ -108,10 +108,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    CGRect rect = [cell.superview convertRect:cell.frame toView:window];
+    
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DYMonents1CellCommentItemModel *model = self.commentItemsArray[indexPath.row];
     if (self.dy_moments1CommentClickBlock) {
-        self.dy_moments1CommentClickBlock(indexPath, model);
+        self.dy_moments1CommentClickBlock(indexPath, model, rect);
     }
 }
 

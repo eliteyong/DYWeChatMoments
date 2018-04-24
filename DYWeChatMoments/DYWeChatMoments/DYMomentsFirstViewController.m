@@ -9,9 +9,15 @@
 #import "DYMomentsFirstViewController.h"
 #import "DYMoment1Cell.h"
 #import "DYMonents1CellModel.h"
+#import "DYCommentTextView.h"
 
+#define commentTextViewHeight               50
 
-@interface DYMomentsFirstViewController () <DYMomentsCellOperationDelegate>
+@interface DYMomentsFirstViewController () <DYMomentsCellOperationDelegate,UITextViewDelegate>
+
+@property (nonatomic, assign) CGFloat keybordHeight;
+@property (nonatomic, strong) NSIndexPath *currentEditingIndexthPath;
+@property (nonatomic, strong) DYCommentTextView *commentView;
 
 @end
 
@@ -26,8 +32,58 @@
     [self.dataArray addObjectsFromArray:[self creatModelsWithCount:50]];
 
     [self setUpMainView];
+
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[[YYFPSLabel alloc] initWithFrame:CGRectMake(0, 5, 60, 30)]];
 }
 
+- (void)keyboardWillShow:(NSNotification *)aNotification {
+    //获取键盘的高度
+    NSDictionary *userInfo = [aNotification userInfo];
+    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [aValue CGRectValue];
+    int height = keyboardRect.size.height;
+    self.keybordHeight = height;
+    [self adjustTableViewToFitKeyboard];
+
+}
+
+//当键退出时调用
+- (void)keyboardWillHide:(NSNotification *)aNotification {
+    self.commentView.frame = CGRectMake(0, DYScreenHeight, DYScreenWidth, commentTextViewHeight);
+
+}
+
+- (void)keyboardNotification:(NSNotification *)notification {
+    NSDictionary *dict = notification.userInfo;
+    CGRect rect = [dict[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+    self.keybordHeight = rect.size.height;
+    [self adjustTableViewToFitKeyboard];
+    
+}
+- (void)adjustTableViewToFitKeyboard {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:_currentEditingIndexthPath];
+    CGRect rect = [cell.superview convertRect:cell.frame toView:window];
+    [self adjustTableViewToFitKeyboardWithRect:rect];
+}
+- (void)adjustTableViewToFitKeyboardWithRect:(CGRect)rect {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGFloat delta = CGRectGetMaxY(rect) - (window.bounds.size.height - self.keybordHeight - commentTextViewHeight);
+    
+    CGPoint offset = self.tableView.contentOffset;
+    offset.y += delta;
+    if (offset.y < 0) {
+        offset.y = 0;
+    }
+    
+    [self.tableView setContentOffset:offset animated:YES];
+    
+    self.commentView.frame = CGRectMake(0, DYScreenHeight - commentTextViewHeight - self.keybordHeight, DYScreenWidth, commentTextViewHeight);
+}
 #pragma mark --- 创建视图
 /*
  设置视图控制器
@@ -39,8 +95,11 @@
 }
 
 - (void)setUpMainView {
+    self.commentView = [[DYCommentTextView alloc] initWithFrame:CGRectMake(0, DYScreenHeight, DYScreenWidth, 50)];
+    self.commentView.textView.delegate = self;
+    [self.view addSubview:self.commentView];
+    
     self.tableView.frame = CGRectMake(0, 0, DYScreenWidth, DYScreenHeight);
-
     self.tableView.tableFooterView = [UIView new];
     
     [self.tableView reloadData];
@@ -83,8 +142,10 @@
         [weakSelf.tableView reloadRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
     };
     //点击内层cell所做的操作
-    cell.clickedToCommentBlock = ^(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel) {
+    cell.clickedToCommentBlock = ^(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel,CGRect rectInWindow) {
         NSLog(@"点击了第%ld个动态\n 里面第%ld个评论\n评论的内容是%@",outerIndexPath.row,innerIndexPath.row,innerCommentModel.attributedContent);
+        [self.commentView.textView becomeFirstResponder];
+        [weakSelf adjustTableViewToFitKeyboardWithRect:rectInWindow];
     };
     //此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
@@ -93,11 +154,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    DYMonents1CellModel *model = [self.dataArray objectAtIndex:indexPath.row];
-//
-//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    
 }
 
 - (CGFloat)cellContentViewWith {
@@ -141,7 +197,12 @@
 }
 //点击评论
 - (void)didClickCommentBtnInCell:(UITableViewCell *)cell {
-
+    
+    [self.commentView.textView becomeFirstResponder];
+    
+    _currentEditingIndexthPath = [self.tableView indexPathForCell:cell];
+    
+    [self adjustTableViewToFitKeyboard];
 }
 
 
@@ -249,5 +310,8 @@
     return [resArr copy];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
