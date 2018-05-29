@@ -11,14 +11,23 @@
 
 #define DYThemeColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
 
+#define DY_MainBackgroudColor DYColor(248, 248, 248, 1)
+#define DY_Global_tintColor DYColor(54, 53, 59, 1)
+
+
+
 #import "DYCustomHeader.h"
 
 #import "YYFPSLabel.h"
 #import "SDPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
+#import "PinYin4Objc.h"
+
 
 #import <SDAutoLayout.h>
 #import <Masonry.h>
+#import <FMDB.h>
+
 
 #endif /* DYWeChatMomentPrefixHeader_pch */

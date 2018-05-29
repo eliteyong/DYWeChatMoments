@@ -19,6 +19,11 @@
 @property (nonatomic, strong) NSIndexPath *currentEditingIndexthPath;
 @property (nonatomic, strong) DYCommentTextView *commentView;
 
+/**
+ 记录上一次的位移
+ */
+@property (nonatomic, assign) CGFloat lastOffset;
+
 @end
 
 @implementation DYMomentsFirstViewController
@@ -312,6 +317,26 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.lastOffset = scrollView.contentOffset.y;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y < self.lastOffset) {
+        //向上滚动
+//        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [UIView animateWithDuration:0.5 animations:^{
+//            self.navigationController.navigationBar.frame = CGRectMake(0, 20, DYScreenWidth, 20);
+            self.navigationItem.titleView.frame = CGRectMake(0, 20, DYScreenWidth, 20);
+        }];
+    } else if (scrollView.contentOffset.y > self.lastOffset) {
+        //向下滚动
+//        [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+    }
+    
 }
 
 @end

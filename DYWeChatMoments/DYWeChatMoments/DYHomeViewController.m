@@ -8,7 +8,9 @@
 
 #import "DYHomeViewController.h"
 
-@interface DYHomeViewController ()
+
+@interface DYHomeViewController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+
 
 @end
 
@@ -16,8 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
 }
+
+
+
 
 @end

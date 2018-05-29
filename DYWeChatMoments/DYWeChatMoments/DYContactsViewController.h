@@ -8,6 +8,7 @@
 
 #import "DYBaseViewController.h"
 
-@interface DYContactsViewController : DYBaseViewController
+@interface DYContactsViewController : DYBaseViewController <UITableViewDataSource,UITableViewDelegate>
+
 
 @end

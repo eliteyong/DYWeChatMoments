@@ -7,31 +7,96 @@
 //
 
 #import "DYMeViewController.h"
+#import "DYDiscoverListCell.h"
+#import "DYMeHeaderCell.h"
 
-@interface DYMeViewController ()
+@interface DYMeViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray *titles;
 
 @end
 
 @implementation DYMeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.titles = @[
+                    
+                    @[
+                        @{@"钱包":@"MoreMyBankCard"},
+                        ],
+                    
+                    @[
+                       
+                        @{@"收藏":@"MoreMyFavorites"},
+                        @{@"相册":@"ff_IconShowAlbum"},
+                        @{@"卡券":@"MyCardPackageIcon"},
+                        @{@"表情":@"MoreExpressionShops"},
+                        ],
+                    
+                    @[
+                        @{@"设置":@"MoreSetting"},
+                        ],
+                    ];
+    [self.view addSubview:self.tableView];
+    
+    self.tableView.frame = CGRectMake(0, DYNavbarHeight, DYScreenWidth, DYScreenHeight - DYNavbarHeight - DYTabBarHeight);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.titles.count + 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
+    NSArray *sectionArr = self.titles[section - 1];
+    return sectionArr.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 88;
+    }
+    return 44;
 }
-*/
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 15;
+    }
+    return 20;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if (section == self.titles.count) {
+        return 25;
+    }
+    return 0.01;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        DYMeHeaderCell *cell = [DYMeHeaderCell dy_meHeaderCellForTableView:tableView];
+        
+        return cell;
+    }
+    NSArray *sectionArr = self.titles[indexPath.section - 1];
+    NSDictionary *dic = sectionArr[indexPath.row];
+    
+    DYDiscoverListCell *cell = [DYDiscoverListCell dy_discoverListCellForTableView:tableView];
+    cell.dict = dic;
+    cell.isHiddenLine = indexPath.row == sectionArr.count - 1;
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+
+}
+
 
 @end

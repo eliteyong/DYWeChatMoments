@@ -34,6 +34,10 @@
 #define DYTabBarHeight (DY_iPhoneX ? (49.f + 34.f) : (49.f))
 #define DYBottomSafeHeight ((DY_iPhoneX) ? (34) : (0))
 
+
+/// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
+#define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
+
 #define DYAlmostZero 0.0001
 
 

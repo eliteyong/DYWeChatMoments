@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42A0E632AEA83C1F6724FE95 /* libPods-DYWeChatMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91644B16954D7BB36EED39D0 /* libPods-DYWeChatMoments.a */; };
 		8410DF85208EB317007F7F6D /* DYPlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */; };
+		8410DF8B208F2D94007F7F6D /* DYMeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8410DF8A208F2D94007F7F6D /* DYMeHeaderCell.m */; };
 		841A58D32089BEDA009C1B07 /* DYMoments1CommentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58D22089BEDA009C1B07 /* DYMoments1CommentContainerView.m */; };
 		841A58D62089CA7F009C1B07 /* DYMonets1CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58D52089CA7F009C1B07 /* DYMonets1CommentCell.m */; };
 		841A58F32089CF29009C1B07 /* NSAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58DB2089CF29009C1B07 /* NSAttributedString+MLLabel.m */; };
@@ -23,6 +24,22 @@
 		841A58FC2089CF29009C1B07 /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A58F02089CF29009C1B07 /* MLLinkLabel.m */; };
 		841A58FD2089CF29009C1B07 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 841A58F12089CF29009C1B07 /* LICENSE */; };
 		841A58FE2089CF29009C1B07 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 841A58F22089CF29009C1B07 /* README.md */; };
+		8421A9C620BCF363007A7808 /* DYFMDBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9C520BCF363007A7808 /* DYFMDBMainViewController.m */; };
+		8421A9C920BCF397007A7808 /* DYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9C820BCF397007A7808 /* DYPerson.m */; };
+		8421A9CC20BCF3A1007A7808 /* DYCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9CB20BCF3A1007A7808 /* DYCar.m */; };
+		8421A9D020BCF466007A7808 /* DYPersonCarDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9CF20BCF466007A7808 /* DYPersonCarDataBase.m */; };
+		8421A9D320BD3EB5007A7808 /* DYPersonCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D220BD3EB5007A7808 /* DYPersonCarViewController.m */; };
+		8421A9D920BD4216007A7808 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D520BD4216007A7808 /* WRNavigationBar.m */; };
+		8421A9DA20BD4216007A7808 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */; };
+		8432FF2B2091C0850048CE0E /* DYSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF2A2091C0850048CE0E /* DYSearchResultViewController.m */; };
+		8432FF2D2091C8E70048CE0E /* AddressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 8432FF2C2091C8E70048CE0E /* AddressBook.json */; };
+		8432FF302091C9510048CE0E /* DYContactInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF2F2091C9510048CE0E /* DYContactInfoModel.m */; };
+		8432FF402091CA120048CE0E /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF342091CA120048CE0E /* ChineseToPinyinResource.m */; };
+		8432FF412091CA120048CE0E /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF362091CA120048CE0E /* HanyuPinyinOutputFormat.m */; };
+		8432FF422091CA120048CE0E /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF382091CA120048CE0E /* NSString+PinYin4Cocoa.m */; };
+		8432FF432091CA120048CE0E /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF3B2091CA120048CE0E /* PinyinFormatter.m */; };
+		8432FF442091CA120048CE0E /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF3D2091CA120048CE0E /* PinyinHelper.m */; };
+		8432FF452091CA120048CE0E /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8432FF3F2091CA120048CE0E /* unicode_to_hanyu_pinyin.txt */; };
 		843314B82086F95C005BA780 /* DYMomentsFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */; };
 		843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 843989D4208D65A300AEC598 /* DYMomentsCellOperationMenu.m */; };
 		843989D9208DD3D200AEC598 /* DYCommentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843989D8208DD3D200AEC598 /* DYCommentTextView.m */; };
@@ -121,6 +138,8 @@
 		8472258A2084987500E0F76D /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 847225872084987500E0F76D /* YYFPSLabel.m */; };
 		8472258B2084987500E0F76D /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 847225892084987500E0F76D /* YYWeakProxy.m */; };
 		8472258E208498DD00E0F76D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8472258D208498DD00E0F76D /* data.json */; };
+		8489107A209304F000136B78 /* DYContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84891079209304F000136B78 /* DYContactTableViewCell.m */; };
+		8489107D209315CB00136B78 /* DYSearchPlacehoderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8489107C209315CB00136B78 /* DYSearchPlacehoderView.m */; };
 		84C186E02080981B00DAC73B /* DYDiscoverListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +164,8 @@
 		393EA6E2F31AB29363586383 /* Pods-DYWeChatMoments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWeChatMoments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYWeChatMoments/Pods-DYWeChatMoments.debug.xcconfig"; sourceTree = "<group>"; };
 		8410DF83208EB317007F7F6D /* DYPlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPlacehoderTextView.h; sourceTree = "<group>"; };
 		8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPlacehoderTextView.m; sourceTree = "<group>"; };
+		8410DF89208F2D94007F7F6D /* DYMeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMeHeaderCell.h; sourceTree = "<group>"; };
+		8410DF8A208F2D94007F7F6D /* DYMeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMeHeaderCell.m; sourceTree = "<group>"; };
 		841A58D12089BEDA009C1B07 /* DYMoments1CommentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMoments1CommentContainerView.h; sourceTree = "<group>"; };
 		841A58D22089BEDA009C1B07 /* DYMoments1CommentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMoments1CommentContainerView.m; sourceTree = "<group>"; };
 		841A58D42089CA7F009C1B07 /* DYMonets1CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMonets1CommentCell.h; sourceTree = "<group>"; };
@@ -172,6 +193,37 @@
 		841A58F02089CF29009C1B07 /* MLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkLabel.m; sourceTree = "<group>"; };
 		841A58F12089CF29009C1B07 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		841A58F22089CF29009C1B07 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8421A9C420BCF363007A7808 /* DYFMDBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYFMDBMainViewController.h; sourceTree = "<group>"; };
+		8421A9C520BCF363007A7808 /* DYFMDBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYFMDBMainViewController.m; sourceTree = "<group>"; };
+		8421A9C720BCF397007A7808 /* DYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPerson.h; sourceTree = "<group>"; };
+		8421A9C820BCF397007A7808 /* DYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPerson.m; sourceTree = "<group>"; };
+		8421A9CA20BCF3A1007A7808 /* DYCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYCar.h; sourceTree = "<group>"; };
+		8421A9CB20BCF3A1007A7808 /* DYCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYCar.m; sourceTree = "<group>"; };
+		8421A9CE20BCF466007A7808 /* DYPersonCarDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPersonCarDataBase.h; sourceTree = "<group>"; };
+		8421A9CF20BCF466007A7808 /* DYPersonCarDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPersonCarDataBase.m; sourceTree = "<group>"; };
+		8421A9D120BD3EB5007A7808 /* DYPersonCarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPersonCarViewController.h; sourceTree = "<group>"; };
+		8421A9D220BD3EB5007A7808 /* DYPersonCarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPersonCarViewController.m; sourceTree = "<group>"; };
+		8421A9D520BD4216007A7808 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		8421A9D620BD4216007A7808 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		8421A9D720BD4216007A7808 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		8432FF292091C0850048CE0E /* DYSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYSearchResultViewController.h; sourceTree = "<group>"; };
+		8432FF2A2091C0850048CE0E /* DYSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYSearchResultViewController.m; sourceTree = "<group>"; };
+		8432FF2C2091C8E70048CE0E /* AddressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddressBook.json; sourceTree = "<group>"; };
+		8432FF2E2091C9510048CE0E /* DYContactInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYContactInfoModel.h; sourceTree = "<group>"; };
+		8432FF2F2091C9510048CE0E /* DYContactInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYContactInfoModel.m; sourceTree = "<group>"; };
+		8432FF332091CA120048CE0E /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		8432FF342091CA120048CE0E /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		8432FF352091CA120048CE0E /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		8432FF362091CA120048CE0E /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		8432FF372091CA120048CE0E /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		8432FF382091CA120048CE0E /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		8432FF392091CA120048CE0E /* PinYin4Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+		8432FF3A2091CA120048CE0E /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		8432FF3B2091CA120048CE0E /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		8432FF3C2091CA120048CE0E /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		8432FF3D2091CA120048CE0E /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		8432FF3F2091CA120048CE0E /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
 		843314B62086F95C005BA780 /* DYMomentsFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMomentsFirstViewController.h; sourceTree = "<group>"; };
 		843314B72086F95C005BA780 /* DYMomentsFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMomentsFirstViewController.m; sourceTree = "<group>"; };
 		843989D3208D65A300AEC598 /* DYMomentsCellOperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMomentsCellOperationMenu.h; sourceTree = "<group>"; };
@@ -321,6 +373,10 @@
 		847225882084987500E0F76D /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		847225892084987500E0F76D /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		8472258D208498DD00E0F76D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		84891078209304F000136B78 /* DYContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYContactTableViewCell.h; sourceTree = "<group>"; };
+		84891079209304F000136B78 /* DYContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYContactTableViewCell.m; sourceTree = "<group>"; };
+		8489107B209315CB00136B78 /* DYSearchPlacehoderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYSearchPlacehoderView.h; sourceTree = "<group>"; };
+		8489107C209315CB00136B78 /* DYSearchPlacehoderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYSearchPlacehoderView.m; sourceTree = "<group>"; };
 		84C186DE2080981B00DAC73B /* DYDiscoverListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYDiscoverListCell.h; sourceTree = "<group>"; };
 		84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYDiscoverListCell.m; sourceTree = "<group>"; };
 		91644B16954D7BB36EED39D0 /* libPods-DYWeChatMoments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYWeChatMoments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -424,6 +480,97 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		8421A9BE20BCEFA7007A7808 /* 发现首页 */ = {
+			isa = PBXGroup;
+			children = (
+				84498B0B207B162900249F78 /* DYDiscoverViewController.h */,
+				84498B0C207B162900249F78 /* DYDiscoverViewController.m */,
+				84C186DE2080981B00DAC73B /* DYDiscoverListCell.h */,
+				84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */,
+			);
+			name = "发现首页";
+			sourceTree = "<group>";
+		};
+		8421A9BF20BCF28B007A7808 /* 微信朋友圈的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				843314B92086F960005BA780 /* 朋友圈第一种实现方式 */,
+				847225842084978300E0F76D /* 朋友圈基类 */,
+			);
+			name = "微信朋友圈的实现";
+			sourceTree = "<group>";
+		};
+		8421A9C320BCF2CD007A7808 /* FMDB的简单实用 */ = {
+			isa = PBXGroup;
+			children = (
+				8421A9C420BCF363007A7808 /* DYFMDBMainViewController.h */,
+				8421A9C520BCF363007A7808 /* DYFMDBMainViewController.m */,
+				8421A9CE20BCF466007A7808 /* DYPersonCarDataBase.h */,
+				8421A9CF20BCF466007A7808 /* DYPersonCarDataBase.m */,
+				8421A9D120BD3EB5007A7808 /* DYPersonCarViewController.h */,
+				8421A9D220BD3EB5007A7808 /* DYPersonCarViewController.m */,
+				8421A9CD20BCF449007A7808 /* Model */,
+			);
+			name = "FMDB的简单实用";
+			sourceTree = "<group>";
+		};
+		8421A9CD20BCF449007A7808 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8421A9C720BCF397007A7808 /* DYPerson.h */,
+				8421A9C820BCF397007A7808 /* DYPerson.m */,
+				8421A9CA20BCF3A1007A7808 /* DYCar.h */,
+				8421A9CB20BCF3A1007A7808 /* DYCar.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8421A9D420BD4216007A7808 /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				8421A9D520BD4216007A7808 /* WRNavigationBar.m */,
+				8421A9D620BD4216007A7808 /* WRCustomNavigationBar.h */,
+				8421A9D720BD4216007A7808 /* WRNavigationBar.h */,
+				8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		8432FF312091CA120048CE0E /* PinYin4Objc */ = {
+			isa = PBXGroup;
+			children = (
+				8432FF322091CA120048CE0E /* Classes */,
+				8432FF3E2091CA120048CE0E /* Resources */,
+			);
+			path = PinYin4Objc;
+			sourceTree = "<group>";
+		};
+		8432FF322091CA120048CE0E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8432FF332091CA120048CE0E /* ChineseToPinyinResource.h */,
+				8432FF342091CA120048CE0E /* ChineseToPinyinResource.m */,
+				8432FF352091CA120048CE0E /* HanyuPinyinOutputFormat.h */,
+				8432FF362091CA120048CE0E /* HanyuPinyinOutputFormat.m */,
+				8432FF372091CA120048CE0E /* NSString+PinYin4Cocoa.h */,
+				8432FF382091CA120048CE0E /* NSString+PinYin4Cocoa.m */,
+				8432FF392091CA120048CE0E /* PinYin4Objc.h */,
+				8432FF3A2091CA120048CE0E /* PinyinFormatter.h */,
+				8432FF3B2091CA120048CE0E /* PinyinFormatter.m */,
+				8432FF3C2091CA120048CE0E /* PinyinHelper.h */,
+				8432FF3D2091CA120048CE0E /* PinyinHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8432FF3E2091CA120048CE0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8432FF3F2091CA120048CE0E /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		843314B92086F960005BA780 /* 朋友圈第一种实现方式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +613,14 @@
 			children = (
 				84498B07207B15E400249F78 /* DYContactsViewController.h */,
 				84498B08207B15E400249F78 /* DYContactsViewController.m */,
+				8432FF2E2091C9510048CE0E /* DYContactInfoModel.h */,
+				8432FF2F2091C9510048CE0E /* DYContactInfoModel.m */,
+				84891078209304F000136B78 /* DYContactTableViewCell.h */,
+				84891079209304F000136B78 /* DYContactTableViewCell.m */,
+				8432FF292091C0850048CE0E /* DYSearchResultViewController.h */,
+				8432FF2A2091C0850048CE0E /* DYSearchResultViewController.m */,
+				8489107B209315CB00136B78 /* DYSearchPlacehoderView.h */,
+				8489107C209315CB00136B78 /* DYSearchPlacehoderView.m */,
 			);
 			name = "Contacts通讯录";
 			sourceTree = "<group>";
@@ -473,12 +628,9 @@
 		84498B0E207B162C00249F78 /* Discover发现 */ = {
 			isa = PBXGroup;
 			children = (
-				84498B0B207B162900249F78 /* DYDiscoverViewController.h */,
-				84498B0C207B162900249F78 /* DYDiscoverViewController.m */,
-				84C186DE2080981B00DAC73B /* DYDiscoverListCell.h */,
-				84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */,
-				843314B92086F960005BA780 /* 朋友圈第一种实现方式 */,
-				847225842084978300E0F76D /* 朋友圈基类 */,
+				8421A9BE20BCEFA7007A7808 /* 发现首页 */,
+				8421A9BF20BCF28B007A7808 /* 微信朋友圈的实现 */,
+				8421A9C320BCF2CD007A7808 /* FMDB的简单实用 */,
 			);
 			name = "Discover发现";
 			sourceTree = "<group>";
@@ -488,6 +640,8 @@
 			children = (
 				84498B0F207B164700249F78 /* DYMeViewController.h */,
 				84498B10207B164700249F78 /* DYMeViewController.m */,
+				8410DF89208F2D94007F7F6D /* DYMeHeaderCell.h */,
+				8410DF8A208F2D94007F7F6D /* DYMeHeaderCell.m */,
 			);
 			name = "Me我";
 			sourceTree = "<group>";
@@ -535,6 +689,7 @@
 		84563D682079EF8400A4A77D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8432FF2C2091C8E70048CE0E /* AddressBook.json */,
 				8472258D208498DD00E0F76D /* data.json */,
 				84563D762079EF8400A4A77D /* LaunchScreen.storyboard */,
 				84563D792079EF8400A4A77D /* Info.plist */,
@@ -806,6 +961,8 @@
 		8472258C2084987A00E0F76D /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				8421A9D420BD4216007A7808 /* WRNavigationBar */,
+				8432FF312091CA120048CE0E /* PinYin4Objc */,
 				841A58D72089CF29009C1B07 /* MLLabel */,
 				84564DAE208861890060932D /* SDPhotoBrowser */,
 				84564DB6208861890060932D /* SDWebImage */,
@@ -943,6 +1100,7 @@
 				84563DFA207A1BC500A4A77D /* 14.jpg in Resources */,
 				84563E20207A1BC600A4A77D /* pic4.jpg in Resources */,
 				84563E01207A1BC500A4A77D /* 20.jpg in Resources */,
+				8432FF2D2091C8E70048CE0E /* AddressBook.json in Resources */,
 				84563E15207A1BC600A4A77D /* Me.xcassets in Resources */,
 				84563DF8207A1BC500A4A77D /* 12.jpg in Resources */,
 				84563E22207A1BC600A4A77D /* pic6.jpg in Resources */,
@@ -972,6 +1130,7 @@
 				84563DFF207A1BC500A4A77D /* 19.jpg in Resources */,
 				84563E0B207A1BC500A4A77D /* 9.jpg in Resources */,
 				84563E1D207A1BC600A4A77D /* pic1.jpg in Resources */,
+				8432FF452091CA120048CE0E /* unicode_to_hanyu_pinyin.txt in Resources */,
 				84563E21207A1BC600A4A77D /* pic5.jpg in Resources */,
 				84563E10207A1BC500A4A77D /* icon4.jpg in Resources */,
 				84563E24207A1BC600A4A77D /* pic8.jpg in Resources */,
@@ -1064,9 +1223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432FF402091CA120048CE0E /* ChineseToPinyinResource.m in Sources */,
 				8472257E2084847700E0F76D /* UIButton+DYCustom.m in Sources */,
 				84564DE42088618A0060932D /* UIButton+WebCache.m in Sources */,
+				8421A9D920BD4216007A7808 /* WRNavigationBar.m in Sources */,
 				84564DE22088618A0060932D /* SDWebImageManager.m in Sources */,
+				8410DF8B208F2D94007F7F6D /* DYMeHeaderCell.m in Sources */,
 				84498B09207B15E400249F78 /* DYContactsViewController.m in Sources */,
 				847225832084977D00E0F76D /* DYMomentsBaseViewController.m in Sources */,
 				84564DAA208848D80060932D /* DYMonents1CellModel.m in Sources */,
@@ -1077,29 +1239,41 @@
 				84564DDE2088618A0060932D /* SDWebImageCompat.m in Sources */,
 				84564DAD20884A340060932D /* DYMoment1Cell.m in Sources */,
 				84564DD82088618A0060932D /* SDBrowserImageView.m in Sources */,
+				8421A9CC20BCF3A1007A7808 /* DYCar.m in Sources */,
 				84563DB2207A17E200A4A77D /* DYRootTabBarController.m in Sources */,
 				84564DEA2088618A0060932D /* UIView+WebCacheOperation.m in Sources */,
 				84563D6D2079EF8400A4A77D /* AppDelegate.m in Sources */,
 				84563D6A2079EF8400A4A77D /* main.m in Sources */,
+				8421A9C620BCF363007A7808 /* DYFMDBMainViewController.m in Sources */,
 				84564DE92088618A0060932D /* UIImageView+WebCache.m in Sources */,
 				841A58F82089CF29009C1B07 /* NSAttributedString+MLExpression.m in Sources */,
 				84564DE72088618A0060932D /* UIImage+WebP.m in Sources */,
 				84564DDD2088618A0060932D /* SDImageCache.m in Sources */,
+				8489107A209304F000136B78 /* DYContactTableViewCell.m in Sources */,
+				8421A9DA20BD4216007A7808 /* WRCustomNavigationBar.m in Sources */,
+				8432FF432091CA120048CE0E /* PinyinFormatter.m in Sources */,
 				8472258A2084987500E0F76D /* YYFPSLabel.m in Sources */,
+				8432FF442091CA120048CE0E /* PinyinHelper.m in Sources */,
 				841A58D62089CA7F009C1B07 /* DYMonets1CommentCell.m in Sources */,
 				841A58F62089CF29009C1B07 /* MLExpressionManager.m in Sources */,
 				84564DE62088618A0060932D /* UIImage+MultiFormat.m in Sources */,
 				84564DE12088618A0060932D /* SDWebImageDownloaderOperation.m in Sources */,
 				847225802084847700E0F76D /* UILabel+DYCustom.m in Sources */,
 				84564DE82088618A0060932D /* UIImageView+HighlightedWebCache.m in Sources */,
+				8432FF2B2091C0850048CE0E /* DYSearchResultViewController.m in Sources */,
 				84563DB5207A17F200A4A77D /* DYBaseViewController.m in Sources */,
+				8432FF412091CA120048CE0E /* HanyuPinyinOutputFormat.m in Sources */,
 				84C186E02080981B00DAC73B /* DYDiscoverListCell.m in Sources */,
 				841A58F32089CF29009C1B07 /* NSAttributedString+MLLabel.m in Sources */,
+				8432FF302091C9510048CE0E /* DYContactInfoModel.m in Sources */,
 				841A58F42089CF29009C1B07 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				841A58F52089CF29009C1B07 /* NSString+MLLabel.m in Sources */,
 				8472257F2084847700E0F76D /* UIImageView+DYCustom.m in Sources */,
+				8432FF422091CA120048CE0E /* NSString+PinYin4Cocoa.m in Sources */,
 				84498B11207B164700249F78 /* DYMeViewController.m in Sources */,
 				84564DDC2088618A0060932D /* NSData+ImageContentType.m in Sources */,
+				8421A9D320BD3EB5007A7808 /* DYPersonCarViewController.m in Sources */,
+				8489107D209315CB00136B78 /* DYSearchPlacehoderView.m in Sources */,
 				84563DAF207A17C100A4A77D /* DYBaseNavigationController.m in Sources */,
 				841A58FC2089CF29009C1B07 /* MLLinkLabel.m in Sources */,
 				841A58FA2089CF29009C1B07 /* MLLabelLayoutManager.m in Sources */,
@@ -1112,6 +1286,7 @@
 				84564DDF2088618A0060932D /* SDWebImageDecoder.m in Sources */,
 				84563DBB207A1B0900A4A77D /* DYBaseTableViewController.m in Sources */,
 				843989D5208D65A300AEC598 /* DYMomentsCellOperationMenu.m in Sources */,
+				8421A9D020BCF466007A7808 /* DYPersonCarDataBase.m in Sources */,
 				84498B0D207B162900249F78 /* DYDiscoverViewController.m in Sources */,
 				84564DD92088618A0060932D /* SDPhotoBrowser.m in Sources */,
 				841A58FB2089CF29009C1B07 /* MLLabel.m in Sources */,
@@ -1119,6 +1294,7 @@
 				84564DE32088618A0060932D /* SDWebImagePrefetcher.m in Sources */,
 				84564DDB2088618A0060932D /* MKAnnotationView+WebCache.m in Sources */,
 				84564DE52088618A0060932D /* UIImage+GIF.m in Sources */,
+				8421A9C920BCF397007A7808 /* DYPerson.m in Sources */,
 				84564DDA2088618A0060932D /* SDWaitingView.m in Sources */,
 				84564DED208866670060932D /* DYComentsPhotoContainerView.m in Sources */,
 			);

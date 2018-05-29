@@ -69,7 +69,7 @@
     .leftSpaceToView(self.iconImageView, labelLeftToImage)
     .topSpaceToView(self.contentView, 0)
     .bottomSpaceToView(self.contentView, 0)
-    .rightSpaceToView(self.contentView, 60);
+    .rightSpaceToView(self.contentView, 0);
     
     self.lineView.sd_layout
     .leftSpaceToView(self.contentView, spaceToLeft)

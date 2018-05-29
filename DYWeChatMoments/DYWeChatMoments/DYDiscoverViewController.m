@@ -10,6 +10,7 @@
 #import "DYDiscoverListCell.h"
 
 #import "DYMomentsFirstViewController.h"
+#import "DYFMDBMainViewController.h"
 
 @interface DYDiscoverViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,14 +24,15 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1];
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+
+    AdjustsScrollViewInsetNever(self, self.tableView);
     
     self.titles = @[
                     @[
-                        @{@"朋友圈1":@"ff_IconShowAlbum"},
-                        @{@"朋友圈2":@"ff_IconShowAlbum"},
-                        @{@"朋友圈3":@"ff_IconShowAlbum"},
+                        @{@"朋友圈SDAutoLayout":@"ff_IconShowAlbum"},
+                        @{@"FMDB的使用":@"ff_IconQRCode"},
+                        @{@"朋友圈3":@"ff_IconShake"},
                         ],
                     
                     @[
@@ -96,9 +98,27 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DYMomentsFirstViewController *vc = [[DYMomentsFirstViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    if (indexPath.section == 0) {
+        NSArray *section0Arr = @[@"DYMomentsFirstViewController",@"DYFMDBMainViewController",@"DYMomentsFirstViewController"];
+        [self getInToVCWithVcName:section0Arr[indexPath.row]];
+//        if (indexPath.row == 0) {
+//            DYMomentsFirstViewController *vc = [[DYMomentsFirstViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//        if (indexPath.row == 1) {
+////            DYFMDBMainViewController *vc
+//        }
+    }
 }
 
+//  根据vc的名字进入对应的vc
+- (void)getInToVCWithVcName:(NSString *)vcName {
+    
+    UIViewController *targetVC;
+    Class VCClass = NSClassFromString(vcName);
+    targetVC = [[VCClass alloc] init];
+    [self.navigationController pushViewController:targetVC animated:YES];
+}
 
 @end
