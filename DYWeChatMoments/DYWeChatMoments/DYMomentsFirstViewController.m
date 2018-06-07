@@ -38,11 +38,9 @@
 
     [self setUpMainView];
 
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[[YYFPSLabel alloc] initWithFrame:CGRectMake(0, 5, 60, 30)]];
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification {
@@ -104,8 +102,23 @@
     self.commentView.textView.delegate = self;
     [self.view addSubview:self.commentView];
     
-    self.tableView.frame = CGRectMake(0, 0, DYScreenWidth, DYScreenHeight);
+//    self.tableView.frame = CGRectMake(0, 0, DYScreenWidth, DYScreenHeight);
     self.tableView.tableFooterView = [UIView new];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (@available(iOS 11,*)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        } else {
+            make.top.equalTo(self.mas_topLayoutGuide);
+        }
+        make.left.mas_equalTo(self.view).with.offset(0);
+//        make.right.equalTo(self.view);
+        make.width.mas_equalTo(DYScreenWidth);
+        if (@available(iOS 11,*)) {
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        } else {
+            make.bottom.equalTo(self.mas_bottomLayoutGuide);
+        }
+    }];
     
     [self.tableView reloadData];
 }
@@ -133,7 +146,6 @@
     id model = self.dataArray[indexPath.row];
     return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"moments1CellModel" cellClass:[DYMoment1Cell class] contentViewWidth:[self cellContentViewWith]];
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     __weak __typeof(self) weakSelf = self;
     DYMoment1Cell *cell = [DYMoment1Cell dy_moment1CellForTableView:tableView];
@@ -144,7 +156,7 @@
     cell.moreBlock = ^(NSIndexPath *currentIndexPath) {
         DYMonents1CellModel *model = [weakSelf.dataArray objectAtIndex:currentIndexPath.row];
         model.isOpening = !model.isOpening;
-        [weakSelf.tableView reloadRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [weakSelf.tableView reloadRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
     };
     //点击内层cell所做的操作
     cell.clickedToCommentBlock = ^(NSIndexPath *outerIndexPath, NSIndexPath *innerIndexPath, DYMonents1CellCommentItemModel *innerCommentModel,CGRect rectInWindow) {
@@ -152,7 +164,7 @@
         [self.commentView.textView becomeFirstResponder];
         [weakSelf adjustTableViewToFitKeyboardWithRect:rectInWindow];
     };
-    //此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅
+    //此步设置用于实现cell的frame缓存
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
     return cell;
 }
@@ -324,18 +336,18 @@
     self.lastOffset = scrollView.contentOffset.y;
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y < self.lastOffset) {
-        //向上滚动
-//        [self.navigationController setNavigationBarHidden:NO animated:YES];
-        [UIView animateWithDuration:0.5 animations:^{
-//            self.navigationController.navigationBar.frame = CGRectMake(0, 20, DYScreenWidth, 20);
-            self.navigationItem.titleView.frame = CGRectMake(0, 20, DYScreenWidth, 20);
-        }];
-    } else if (scrollView.contentOffset.y > self.lastOffset) {
-        //向下滚动
-//        [self.navigationController setNavigationBarHidden:YES animated:YES];
-
-    }
+//    if (scrollView.contentOffset.y < self.lastOffset) {
+//        //向上滚动
+////        [self.navigationController setNavigationBarHidden:NO animated:YES];
+//        [UIView animateWithDuration:0.5 animations:^{
+////            self.navigationController.navigationBar.frame = CGRectMake(0, 20, DYScreenWidth, 20);
+//            self.navigationItem.titleView.frame = CGRectMake(0, 20, DYScreenWidth, 20);
+//        }];
+//    } else if (scrollView.contentOffset.y > self.lastOffset) {
+//        //向下滚动
+////        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//
+//    }
     
 }
 

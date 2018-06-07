@@ -31,6 +31,8 @@
 		8421A9D320BD3EB5007A7808 /* DYPersonCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D220BD3EB5007A7808 /* DYPersonCarViewController.m */; };
 		8421A9D920BD4216007A7808 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D520BD4216007A7808 /* WRNavigationBar.m */; };
 		8421A9DA20BD4216007A7808 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */; };
+		8421A9DE20BD4F56007A7808 /* DYInputTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9DD20BD4F56007A7808 /* DYInputTextFieldCell.m */; };
+		8421A9E220BD54A1007A7808 /* DYChooseToPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421A9E120BD54A1007A7808 /* DYChooseToPopCell.m */; };
 		8432FF2B2091C0850048CE0E /* DYSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF2A2091C0850048CE0E /* DYSearchResultViewController.m */; };
 		8432FF2D2091C8E70048CE0E /* AddressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 8432FF2C2091C8E70048CE0E /* AddressBook.json */; };
 		8432FF302091C9510048CE0E /* DYContactInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF2F2091C9510048CE0E /* DYContactInfoModel.m */; };
@@ -207,6 +209,11 @@
 		8421A9D620BD4216007A7808 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		8421A9D720BD4216007A7808 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		8421A9DC20BD4F56007A7808 /* DYInputTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYInputTextFieldCell.h; sourceTree = "<group>"; };
+		8421A9DD20BD4F56007A7808 /* DYInputTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYInputTextFieldCell.m; sourceTree = "<group>"; };
+		8421A9DF20BD4FDB007A7808 /* DYTableViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYTableViewHeader.h; sourceTree = "<group>"; };
+		8421A9E020BD54A1007A7808 /* DYChooseToPopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYChooseToPopCell.h; sourceTree = "<group>"; };
+		8421A9E120BD54A1007A7808 /* DYChooseToPopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYChooseToPopCell.m; sourceTree = "<group>"; };
 		8432FF292091C0850048CE0E /* DYSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYSearchResultViewController.h; sourceTree = "<group>"; };
 		8432FF2A2091C0850048CE0E /* DYSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYSearchResultViewController.m; sourceTree = "<group>"; };
 		8432FF2C2091C8E70048CE0E /* AddressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddressBook.json; sourceTree = "<group>"; };
@@ -534,6 +541,19 @@
 				8421A9D820BD4216007A7808 /* WRCustomNavigationBar.m */,
 			);
 			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		8421A9DB20BD4EA2007A7808 /* UI家族(继承) */ = {
+			isa = PBXGroup;
+			children = (
+				8410DF83208EB317007F7F6D /* DYPlacehoderTextView.h */,
+				8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */,
+				8421A9DC20BD4F56007A7808 /* DYInputTextFieldCell.h */,
+				8421A9DD20BD4F56007A7808 /* DYInputTextFieldCell.m */,
+				8421A9E020BD54A1007A7808 /* DYChooseToPopCell.h */,
+				8421A9E120BD54A1007A7808 /* DYChooseToPopCell.m */,
+			);
+			path = "UI家族(继承)";
 			sourceTree = "<group>";
 		};
 		8432FF312091CA120048CE0E /* PinYin4Objc */ = {
@@ -906,24 +926,24 @@
 			isa = PBXGroup;
 			children = (
 				847225722084847700E0F76D /* DYCustomHeader.h */,
-				847225732084847700E0F76D /* NS家族 */,
-				847225762084847700E0F76D /* UI家族 */,
-				8410DF83208EB317007F7F6D /* DYPlacehoderTextView.h */,
-				8410DF84208EB317007F7F6D /* DYPlacehoderTextView.m */,
+				8421A9DF20BD4FDB007A7808 /* DYTableViewHeader.h */,
+				847225732084847700E0F76D /* NS家族(类别) */,
+				847225762084847700E0F76D /* UI家族(类别) */,
+				8421A9DB20BD4EA2007A7808 /* UI家族(继承) */,
 			);
 			path = DYCustomClasses;
 			sourceTree = "<group>";
 		};
-		847225732084847700E0F76D /* NS家族 */ = {
+		847225732084847700E0F76D /* NS家族(类别) */ = {
 			isa = PBXGroup;
 			children = (
 				847225742084847700E0F76D /* NSString+DYCustom.h */,
 				847225752084847700E0F76D /* NSString+DYCustom.m */,
 			);
-			path = "NS家族";
+			path = "NS家族(类别)";
 			sourceTree = "<group>";
 		};
-		847225762084847700E0F76D /* UI家族 */ = {
+		847225762084847700E0F76D /* UI家族(类别) */ = {
 			isa = PBXGroup;
 			children = (
 				847225772084847700E0F76D /* UIButton+DYCustom.h */,
@@ -933,7 +953,7 @@
 				8472257B2084847700E0F76D /* UILabel+DYCustom.h */,
 				8472257C2084847700E0F76D /* UILabel+DYCustom.m */,
 			);
-			path = "UI家族";
+			path = "UI家族(类别)";
 			sourceTree = "<group>";
 		};
 		847225842084978300E0F76D /* 朋友圈基类 */ = {
@@ -1049,8 +1069,7 @@
 				TargetAttributes = {
 					84563D642079EF8400A4A77D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = M92V2T43TR;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					84563D7D2079EF8400A4A77D = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1289,9 +1308,11 @@
 				8421A9D020BCF466007A7808 /* DYPersonCarDataBase.m in Sources */,
 				84498B0D207B162900249F78 /* DYDiscoverViewController.m in Sources */,
 				84564DD92088618A0060932D /* SDPhotoBrowser.m in Sources */,
+				8421A9DE20BD4F56007A7808 /* DYInputTextFieldCell.m in Sources */,
 				841A58FB2089CF29009C1B07 /* MLLabel.m in Sources */,
 				84498B05207B109C00249F78 /* DYHomeViewController.m in Sources */,
 				84564DE32088618A0060932D /* SDWebImagePrefetcher.m in Sources */,
+				8421A9E220BD54A1007A7808 /* DYChooseToPopCell.m in Sources */,
 				84564DDB2088618A0060932D /* MKAnnotationView+WebCache.m in Sources */,
 				84564DE52088618A0060932D /* UIImage+GIF.m in Sources */,
 				8421A9C920BCF397007A7808 /* DYPerson.m in Sources */,
@@ -1438,13 +1459,15 @@
 			baseConfigurationReference = 393EA6E2F31AB29363586383 /* Pods-DYWeChatMoments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M92V2T43TR;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/admin/Desktop/姚大勇/日常工作/DYWeChatMoments/DYWeChatMoments/DYWeChatMoments/DYWeChatMomentPrefixHeader.pch";
 				INFOPLIST_FILE = DYWeChatMoments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baihe.DYWeChatMoments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1453,13 +1476,15 @@
 			baseConfigurationReference = F0F14B5B8424E70B4116A2A5 /* Pods-DYWeChatMoments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M92V2T43TR;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/admin/Desktop/姚大勇/日常工作/DYWeChatMoments/DYWeChatMoments/DYWeChatMoments/DYWeChatMomentPrefixHeader.pch";
 				INFOPLIST_FILE = DYWeChatMoments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baihe.DYWeChatMoments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

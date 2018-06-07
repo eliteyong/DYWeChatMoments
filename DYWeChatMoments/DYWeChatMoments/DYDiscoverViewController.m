@@ -25,8 +25,6 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1];
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-
-    AdjustsScrollViewInsetNever(self, self.tableView);
     
     self.titles = @[
                     @[
@@ -60,8 +58,20 @@
                         ],
                   ];
     [self.view addSubview:self.tableView];
-    
-    self.tableView.frame = CGRectMake(0, DYNavbarHeight, DYScreenWidth, DYScreenHeight - DYNavbarHeight - DYTabBarHeight);
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (@available(iOS 11,*)) {
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        } else {
+            make.bottom.equalTo(self.mas_bottomLayoutGuide);
+        }
+        if (@available(iOS 11,*)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        } else {
+            make.top.equalTo(self.mas_topLayoutGuide);
+        }
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

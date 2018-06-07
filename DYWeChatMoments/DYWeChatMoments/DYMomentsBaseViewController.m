@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.title = @"朋友圈";
     [self.view addSubview:self.tableView];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+
     UIImageView * backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DYScreenWidth, 260)];
     backgroundImageView.image = [UIImage imageNamed:@"pbg.jpg"];
     self.tableView.tableHeaderView = backgroundImageView;

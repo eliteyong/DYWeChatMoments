@@ -54,5 +54,6 @@
 
 //UI家族继承
 #import "DYPlacehoderTextView.h"
+#import "DYInputTextFieldCell.h"
 
 #endif /* DYCustomHeader_h */
