@@ -40,7 +40,6 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
 }
 
 - (void)keyboardWillShow:(NSNotification *)aNotification {
@@ -51,13 +50,11 @@
     int height = keyboardRect.size.height;
     self.keybordHeight = height;
     [self adjustTableViewToFitKeyboard];
-
 }
 
 //当键退出时调用
 - (void)keyboardWillHide:(NSNotification *)aNotification {
     self.commentView.frame = CGRectMake(0, DYScreenHeight, DYScreenWidth, commentTextViewHeight);
-
 }
 
 - (void)keyboardNotification:(NSNotification *)notification {
