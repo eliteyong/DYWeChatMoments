@@ -142,7 +142,15 @@
 		8472258E208498DD00E0F76D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8472258D208498DD00E0F76D /* data.json */; };
 		8489107A209304F000136B78 /* DYContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84891079209304F000136B78 /* DYContactTableViewCell.m */; };
 		8489107D209315CB00136B78 /* DYSearchPlacehoderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8489107C209315CB00136B78 /* DYSearchPlacehoderView.m */; };
+		8496999D222E6BC400471D00 /* TextStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8496999C222E6BC400471D00 /* TextStoryboard.storyboard */; };
 		84C186E02080981B00DAC73B /* DYDiscoverListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */; };
+		84E0676122447409005B585B /* DYHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0676022447409005B585B /* DYHomeCell.m */; };
+		84E06764224484B9005B585B /* DYSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E06763224484B9005B585B /* DYSheetView.m */; };
+		84E0676822448EAA005B585B /* DYSheetTopLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0676722448EAA005B585B /* DYSheetTopLeftView.m */; };
+		84E0676B22448ED8005B585B /* DYSheetLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0676A22448ED8005B585B /* DYSheetLeftTableViewCell.m */; };
+		84E0676E22448F08005B585B /* DYSheetTopCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0676D22448F08005B585B /* DYSheetTopCollectionCell.m */; };
+		84E0677122448F2D005B585B /* DYSheetRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0677022448F2D005B585B /* DYSheetRightTableViewCell.m */; };
+		84F30A8222487C160057E75C /* DYGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F30A8122487C150057E75C /* DYGlobal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,8 +392,23 @@
 		84891079209304F000136B78 /* DYContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYContactTableViewCell.m; sourceTree = "<group>"; };
 		8489107B209315CB00136B78 /* DYSearchPlacehoderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYSearchPlacehoderView.h; sourceTree = "<group>"; };
 		8489107C209315CB00136B78 /* DYSearchPlacehoderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYSearchPlacehoderView.m; sourceTree = "<group>"; };
+		8496999C222E6BC400471D00 /* TextStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextStoryboard.storyboard; sourceTree = "<group>"; };
 		84C186DE2080981B00DAC73B /* DYDiscoverListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYDiscoverListCell.h; sourceTree = "<group>"; };
 		84C186DF2080981B00DAC73B /* DYDiscoverListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYDiscoverListCell.m; sourceTree = "<group>"; };
+		84E0675F22447409005B585B /* DYHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYHomeCell.h; sourceTree = "<group>"; };
+		84E0676022447409005B585B /* DYHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYHomeCell.m; sourceTree = "<group>"; };
+		84E06762224484B9005B585B /* DYSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSheetView.h; sourceTree = "<group>"; };
+		84E06763224484B9005B585B /* DYSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSheetView.m; sourceTree = "<group>"; };
+		84E0676622448EAA005B585B /* DYSheetTopLeftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSheetTopLeftView.h; sourceTree = "<group>"; };
+		84E0676722448EAA005B585B /* DYSheetTopLeftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSheetTopLeftView.m; sourceTree = "<group>"; };
+		84E0676922448ED8005B585B /* DYSheetLeftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSheetLeftTableViewCell.h; sourceTree = "<group>"; };
+		84E0676A22448ED8005B585B /* DYSheetLeftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSheetLeftTableViewCell.m; sourceTree = "<group>"; };
+		84E0676C22448F08005B585B /* DYSheetTopCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSheetTopCollectionCell.h; sourceTree = "<group>"; };
+		84E0676D22448F08005B585B /* DYSheetTopCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSheetTopCollectionCell.m; sourceTree = "<group>"; };
+		84E0676F22448F2D005B585B /* DYSheetRightTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSheetRightTableViewCell.h; sourceTree = "<group>"; };
+		84E0677022448F2D005B585B /* DYSheetRightTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSheetRightTableViewCell.m; sourceTree = "<group>"; };
+		84F30A8022487C150057E75C /* DYGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYGlobal.h; sourceTree = "<group>"; };
+		84F30A8122487C150057E75C /* DYGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYGlobal.m; sourceTree = "<group>"; };
 		91644B16954D7BB36EED39D0 /* libPods-DYWeChatMoments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYWeChatMoments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F14B5B8424E70B4116A2A5 /* Pods-DYWeChatMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWeChatMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYWeChatMoments/Pods-DYWeChatMoments.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -552,6 +575,8 @@
 				8421A9DD20BD4F56007A7808 /* DYInputTextFieldCell.m */,
 				8421A9E020BD54A1007A7808 /* DYChooseToPopCell.h */,
 				8421A9E120BD54A1007A7808 /* DYChooseToPopCell.m */,
+				84F30A8022487C150057E75C /* DYGlobal.h */,
+				84F30A8122487C150057E75C /* DYGlobal.m */,
 			);
 			path = "UI家族(继承)";
 			sourceTree = "<group>";
@@ -624,6 +649,9 @@
 			children = (
 				84498B03207B109C00249F78 /* DYHomeViewController.h */,
 				84498B04207B109C00249F78 /* DYHomeViewController.m */,
+				84E0676022447409005B585B /* DYHomeCell.m */,
+				84E0675F22447409005B585B /* DYHomeCell.h */,
+				84E06765224484E4005B585B /* 联动的表格 */,
 			);
 			name = "Home微信";
 			sourceTree = "<group>";
@@ -716,6 +744,7 @@
 				84563D742079EF8400A4A77D /* Assets.xcassets */,
 				84563DBD207A1BC500A4A77D /* Images */,
 				84563D692079EF8400A4A77D /* main.m */,
+				8496999C222E6BC400471D00 /* TextStoryboard.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -991,6 +1020,23 @@
 			name = ThirdLibrary;
 			sourceTree = "<group>";
 		};
+		84E06765224484E4005B585B /* 联动的表格 */ = {
+			isa = PBXGroup;
+			children = (
+				84E06762224484B9005B585B /* DYSheetView.h */,
+				84E06763224484B9005B585B /* DYSheetView.m */,
+				84E0676622448EAA005B585B /* DYSheetTopLeftView.h */,
+				84E0676722448EAA005B585B /* DYSheetTopLeftView.m */,
+				84E0676922448ED8005B585B /* DYSheetLeftTableViewCell.h */,
+				84E0676A22448ED8005B585B /* DYSheetLeftTableViewCell.m */,
+				84E0676C22448F08005B585B /* DYSheetTopCollectionCell.h */,
+				84E0676D22448F08005B585B /* DYSheetTopCollectionCell.m */,
+				84E0676F22448F2D005B585B /* DYSheetRightTableViewCell.h */,
+				84E0677022448F2D005B585B /* DYSheetRightTableViewCell.m */,
+			);
+			name = "联动的表格";
+			sourceTree = "<group>";
+		};
 		EF24355B27328CF8B4EC19A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,6 +1170,7 @@
 				84563DF8207A1BC500A4A77D /* 12.jpg in Resources */,
 				84563E22207A1BC600A4A77D /* pic6.jpg in Resources */,
 				84563DF9207A1BC500A4A77D /* 13.jpg in Resources */,
+				8496999D222E6BC400471D00 /* TextStoryboard.storyboard in Resources */,
 				84563E14207A1BC500A4A77D /* Images.xcassets in Resources */,
 				84563DF4207A1BC500A4A77D /* 0.jpg in Resources */,
 				84563E25207A1BC600A4A77D /* picon.jpg in Resources */,
@@ -1245,6 +1292,8 @@
 				8432FF402091CA120048CE0E /* ChineseToPinyinResource.m in Sources */,
 				8472257E2084847700E0F76D /* UIButton+DYCustom.m in Sources */,
 				84564DE42088618A0060932D /* UIButton+WebCache.m in Sources */,
+				84E06764224484B9005B585B /* DYSheetView.m in Sources */,
+				84E0676122447409005B585B /* DYHomeCell.m in Sources */,
 				8421A9D920BD4216007A7808 /* WRNavigationBar.m in Sources */,
 				84564DE22088618A0060932D /* SDWebImageManager.m in Sources */,
 				8410DF8B208F2D94007F7F6D /* DYMeHeaderCell.m in Sources */,
@@ -1275,6 +1324,7 @@
 				8432FF442091CA120048CE0E /* PinyinHelper.m in Sources */,
 				841A58D62089CA7F009C1B07 /* DYMonets1CommentCell.m in Sources */,
 				841A58F62089CF29009C1B07 /* MLExpressionManager.m in Sources */,
+				84E0676E22448F08005B585B /* DYSheetTopCollectionCell.m in Sources */,
 				84564DE62088618A0060932D /* UIImage+MultiFormat.m in Sources */,
 				84564DE12088618A0060932D /* SDWebImageDownloaderOperation.m in Sources */,
 				847225802084847700E0F76D /* UILabel+DYCustom.m in Sources */,
@@ -1297,10 +1347,12 @@
 				841A58FC2089CF29009C1B07 /* MLLinkLabel.m in Sources */,
 				841A58FA2089CF29009C1B07 /* MLLabelLayoutManager.m in Sources */,
 				8472258B2084987500E0F76D /* YYWeakProxy.m in Sources */,
+				84E0676B22448ED8005B585B /* DYSheetLeftTableViewCell.m in Sources */,
 				841A58F72089CF29009C1B07 /* MLTextAttachment.m in Sources */,
 				841A58F92089CF29009C1B07 /* NSString+MLExpression.m in Sources */,
 				843314B82086F95C005BA780 /* DYMomentsFirstViewController.m in Sources */,
 				841A58FE2089CF29009C1B07 /* README.md in Sources */,
+				84E0677122448F2D005B585B /* DYSheetRightTableViewCell.m in Sources */,
 				8410DF85208EB317007F7F6D /* DYPlacehoderTextView.m in Sources */,
 				84564DDF2088618A0060932D /* SDWebImageDecoder.m in Sources */,
 				84563DBB207A1B0900A4A77D /* DYBaseTableViewController.m in Sources */,
@@ -1317,7 +1369,9 @@
 				84564DE52088618A0060932D /* UIImage+GIF.m in Sources */,
 				8421A9C920BCF397007A7808 /* DYPerson.m in Sources */,
 				84564DDA2088618A0060932D /* SDWaitingView.m in Sources */,
+				84E0676822448EAA005B585B /* DYSheetTopLeftView.m in Sources */,
 				84564DED208866670060932D /* DYComentsPhotoContainerView.m in Sources */,
+				84F30A8222487C160057E75C /* DYGlobal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

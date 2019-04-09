@@ -22,7 +22,7 @@
 #define DY_IS_IPHONE5 (IS_IPHONE && DYSCREEN_MAX_LENGTH == 568.0)
 #define DY_IS_IPHONE6 (IS_IPHONE && DYSCREEN_MAX_LENGTH == 667.0)
 #define DY_IS_IPHONE6P (IS_IPHONE && DYSCREEN_MAX_LENGTH == 736.0)
-#define DY_iPhoneX (DYScreenWidth == 375.0f) && (DYScreenHeight == 812.0f) && DY_IS_IPHONE
+#define DY_iPhoneX (DYScreenWidth >= 375.0f) && (DYScreenHeight >= 812.0f) && DY_IS_IPHONE
 
 #define DYAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #define DYDeviceVersion [[UIDevice currentDevice].systemVersion floatValue]
@@ -55,5 +55,7 @@
 //UI家族继承
 #import "DYPlacehoderTextView.h"
 #import "DYInputTextFieldCell.h"
+
+#import "DYGlobal.h"
 
 #endif /* DYCustomHeader_h */

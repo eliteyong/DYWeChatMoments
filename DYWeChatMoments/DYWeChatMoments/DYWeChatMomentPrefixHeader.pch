@@ -12,7 +12,9 @@
 #define DYThemeColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
 
 #define DY_MainBackgroudColor DYColor(248, 248, 248, 1)
-#define DY_Global_tintColor DYColor(54, 53, 59, 1)
+#define DY_Global_tintColor DYColor(248, 248, 248, 1)
+
+//DYColor(54, 53, 59, 1)
 
 
 
